@@ -58,4 +58,3 @@ The following example shows how to describe a test case for the duplicate-id rul
   }]
 }
 ```
- 

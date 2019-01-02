@@ -22,54 +22,70 @@ The following is an example of a test for a single page, such as that produced b
     "version": "3.1.2"
   },
 
-  "testResults": [{ // TODO: Should this be a reverse relationship?
-    "@type": "UITestResult",
-    "outcome": "failed",
-    "impact": "minor",
-
-    // Put "static" info about the rule in its own object
-    "testDescription": {
-      "@type": "TestDescription",
-      "@id": "axe-core:duplicate-id",
-      "help": "id attribute value must be unique", // Maps to dct:title
-      "description": "Ensures every id attribute value is unique",
-      "requirementOf": ["wcag20:parsing", "wcag20:level_a"],
-      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id",
-      "tags": ["cat:color", "wcag2a", "wcag411"],
-    },
-
-    "nodeResults": [{
-      // First node
-      "@type": "ApplicableNodeResult",
+  "testResults": [
+    {
+      // TODO: Should this be a reverse relationship?
+      "@type": "UITestResult",
+      "outcome": "failed",
       "impact": "minor",
-      "meetsRequirement": false, // This node failed
-      // Put node properties into its own object
-      "targetNode": {
-        "@type": "DOMNodeDescription",
-        "html": "<div>...</div>",
-        "selector": ["div"]
+
+      // Put "static" info about the rule in its own object
+      "testDescription": {
+        "@type": "TestDescription",
+        "@id": "axe-core:duplicate-id",
+        "help": "id attribute value must be unique", // Maps to dct:title
+        "description": "Ensures every id attribute value is unique",
+        "requirementOf": [
+          "wcag20:parsing",
+          "wcag20:level_a"
+        ],
+        "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id",
+        "tags": ["cat:color", "wcag2a", "wcag411"]
       },
-      "relatedNodes": [{
-        "@type": "DOMNodeDescription",
-        "html": "<div>...</div>",
-        "selector": ["div"]
-      }],
-      "remediation": [{
-        "@type": "Remediation",
-        "category": "all",
-        "message": "fix the following",
-        "remediation": ["Document has multiple static elements with the same id attribute"]
-      }]
-    }, { // Second node
-      "@type": "ApplicableNodeResult",
-      "meetsRequirement": true, // This node passed
-      "impact": null,
-      "node": {
-        "html": "<div>...</div>",
-        "selector": ["div"]
-      }
-    }]
-  }]
+
+      "nodeResults": [
+        {
+          // First node
+          "@type": "ApplicableNodeResult",
+          "impact": "minor",
+          "meetsRequirement": false, // This node failed
+          // Put node properties into its own object
+          "targetNode": {
+            "@type": "DOMNodeDescription",
+            "html": "<div>...</div>",
+            "selector": ["div"]
+          },
+          "relatedNodes": [
+            {
+              "@type": "DOMNodeDescription",
+              "html": "<div>...</div>",
+              "selector": ["div"]
+            }
+          ],
+          "remediation": [
+            {
+              "@type": "Remediation",
+              "category": "all",
+              "message": "fix the following",
+              "remediation": [
+                "Document has multiple static elements with the same id attribute"
+              ]
+            }
+          ]
+        },
+        {
+          // Second node
+          "@type": "ApplicableNodeResult",
+          "meetsRequirement": true, // This node passed
+          "impact": null,
+          "node": {
+            "html": "<div>...</div>",
+            "selector": ["div"]
+          }
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -77,22 +93,21 @@ The following is an example of a test for a single page, such as that produced b
 
 Support accessibility results for:
 
-* [x] Multiple platforms, including, web, iOS, Android and Windows.
-* [x] Make it easy to generate from existing products, particularly axe-core
-* [x] Support result aggregation
-* [x] Can function as a test case language
-* Can easilly be filtered for:
+- [x] Multiple platforms, including, web, iOS, Android and Windows.
+- [x] Make it easy to generate from existing products, particularly axe-core
+- [x] Support result aggregation
+- [x] Can function as a test case language
+- Can easilly be filtered for:
   - [x] Number of issues
   - [x] Level of impact
-* [x] Can be used to express Passed, Failed, Inapplicable, and Unknown
-* [ ] Include remediation information
-* [ ] Can be used to generate bug tickets and user stories
-* [ ] Have it extend established semantic web concepts where they make sense
-* [ ] Multiple modalities, including fully automated, tool assisted and manual testing
-* [ ] Allows for localisation of results
-* [ ] Can be used to express a confidence level
-* [ ] Can store environmental information for reproducing results
-
+- [x] Can be used to express Passed, Failed, Inapplicable, and Unknown
+- [ ] Include remediation information
+- [ ] Can be used to generate bug tickets and user stories
+- [ ] Have it extend established semantic web concepts where they make sense
+- [ ] Multiple modalities, including fully automated, tool assisted and manual testing
+- [ ] Allows for localisation of results
+- [ ] Can be used to express a confidence level
+- [ ] Can store environmental information for reproducing results
 
 ## Object Types
 
@@ -108,10 +123,7 @@ A TestDescription defines a test, such as a rule in axe-core or a checkpoint in 
   "@id": "axe-core:duplicate-id",
   "help": "id attribute value must be unique", // Maps to dct:title
   "description": "Ensures every id attribute value is unique",
-  "requirementOf": [
-    "wcag20:parsing",
-    "wcag20:level_a"
-  ],
+  "requirementOf": ["wcag20:parsing", "wcag20:level_a"],
   "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/duplicate-id?application=AxeChrome",
   "tags": ["cat:color", "wcag2a", "wcag411"]
 }
@@ -145,7 +157,7 @@ A TestDescription defines a test, such as a rule in axe-core or a checkpoint in 
     "@id": "requirementOf",
     "@type": "Property",
     "rangeIncludes": "TestDescription",
-    "comment": "A list of tests that fail when the result of the TestDescription fails. For example, 
+    "comment": "A list of tests that fail when the result of the TestDescription fails. For example,
     if an axe-core rule for WCAG 2.1 SC 1.1.1 fails, than that SC also fails.",
   }, {
     "@id": "tags",
@@ -158,7 +170,7 @@ A TestDescription defines a test, such as a rule in axe-core or a checkpoint in 
 
 ### UIDescription
 
-A UIDescription is a description of the state of the user interface at the time that a test was performed. The goal is to capture enough information about the user interface the moment it was tested, to enable someone familiar with the product to either reproduce issues or varify that they have been resolved. An app, be it a web app or a native app, can often exist in a variety of states. Changes in state of the user interface should result in a different UIDescription. 
+A UIDescription is a description of the state of the user interface at the time that a test was performed. The goal is to capture enough information about the user interface the moment it was tested, to enable someone familiar with the product to either reproduce issues or varify that they have been resolved. An app, be it a web app or a native app, can often exist in a variety of states. Changes in state of the user interface should result in a different UIDescription.
 
 There is no universal way of capturing the state of an application. At best, an approximation of the state can be made. Each platform should have its own extension of UIDescription, such as WebPageDescription, or AndroidAppDescription. These platform specific types can be used to capture actions that put the app in the tested state.
 
@@ -169,15 +181,19 @@ There is no universal way of capturing the state of an application. At best, an 
   "@type": "WebPageDescription",
   "name": "Deque Homepage",
   "url": "http://deque.com",
-  "resources": [{
-    "url": "http://deque.com",
-    "mimetype": "text/html",
-    "sri": "sha256-10kIurI2DW5bjegHOgc/MMSHiiXK2CAVWCQfoN6h0fs=",
-    "triggeredEvents": [{
-      "type": "mouseover",
-      "...": "..."
-    }]
-  }]
+  "resources": [
+    {
+      "url": "http://deque.com",
+      "mimetype": "text/html",
+      "sri": "sha256-10kIurI2DW5bjegHOgc/MMSHiiXK2CAVWCQfoN6h0fs=",
+      "triggeredEvents": [
+        {
+          "type": "mouseover",
+          "...": "..."
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -186,7 +202,6 @@ There is no universal way of capturing the state of an application. At best, an 
 ```json
 "TODO"
 ```
-
 
 ### UITestResult
 
@@ -205,13 +220,16 @@ The `outcome` can be either `passed`, `failed`, `inapplicable`, or `incomplete`.
   //  internal ID, an object literal, or the @reverse relationship.
   "testDescription": "_:rule123",
   "interface": "_:hoempage",
-  "nodeResults": [{
-    "@type": "ApplicableNodeResult",
-    "...": "..."
-  }, {
-    "@type": "ApplicableNodeResult",
-    "...": "..."
-  }]
+  "nodeResults": [
+    {
+      "@type": "ApplicableNodeResult",
+      "...": "..."
+    },
+    {
+      "@type": "ApplicableNodeResult",
+      "...": "..."
+    }
+  ]
 }
 ```
 
@@ -222,32 +240,38 @@ The `outcome` can be either `passed`, `failed`, `inapplicable`, or `incomplete`.
   "@id": "UITestResult",
   "@type": "Class",
   "comment": "The result of testing a user interface.",
-  "properties": [{
-    "@id": "outcome",
-    "@type": "Property",
-    "rangeIncludes": "earl:OutcomeValue",
-    "comment": "The value returned after performing a test."
-  }, {
-    "@id": "impact",
-    "@type": "Property",
-    "rangeIncludes": "ImpactValue",
-    "comment": "The severity on users of getting a failed outcome"
-  }, {
-    "@id": "testDescription",
-    "@type": "Property",
-    "rangeIncludes": "TestDescription",
-    "comment": ""
-  }, {
-    "@id": "interface",
-    "@type": "Property",
-    "rangeIncludes": "UIDescription",
-    "comment": ""
-  }, {
-    "@id": "nodeResults",
-    "@type": "Property",
-    "rangeIncludes": "ApplicableNodeResult",
-    "comment": ""
-  }]
+  "properties": [
+    {
+      "@id": "outcome",
+      "@type": "Property",
+      "rangeIncludes": "earl:OutcomeValue",
+      "comment": "The value returned after performing a test."
+    },
+    {
+      "@id": "impact",
+      "@type": "Property",
+      "rangeIncludes": "ImpactValue",
+      "comment": "The severity on users of getting a failed outcome"
+    },
+    {
+      "@id": "testDescription",
+      "@type": "Property",
+      "rangeIncludes": "TestDescription",
+      "comment": ""
+    },
+    {
+      "@id": "interface",
+      "@type": "Property",
+      "rangeIncludes": "UIDescription",
+      "comment": ""
+    },
+    {
+      "@id": "nodeResults",
+      "@type": "Property",
+      "rangeIncludes": "ApplicableNodeResult",
+      "comment": ""
+    }
+  ]
 }
 ```
 
@@ -256,7 +280,7 @@ The `outcome` can be either `passed`, `failed`, `inapplicable`, or `incomplete`.
 A NodeTestResult describes if a node that is applicable in an accessibility test meets that test's expectation(s). For example, a rule that checks if all `img` elements have an accessible name, there would be one NodeTestResult for each `img` element. The `meetsExpecations` property is `true` when the `node` has an accessible name, and `false` when it doesn't.
 
 **Important:** Unlike axe-core's current format, relatedNodes are not attached to a specific
-  "check" (expressed in "remediation").
+"check" (expressed in "remediation").
 
 **TODO:** How should we ensure there is always a relationship to a UITestResult? Or should this have a relationship to the test instead?
 
@@ -271,17 +295,22 @@ A NodeTestResult describes if a node that is applicable in an accessibility test
     "@type": "DOMNodeDescription",
     "...": "..."
   },
-  "remediation": [{
-    "@type": "Remediaton",
-    "...": "..."
-  }],
-  "relatedNodes": [{
-    "@type": "DOMNodeDescription",
-    "...": "..."
-  }, {
-    "@type": "DOMNodeDescription",
-    "...": "..."
-  }]
+  "remediation": [
+    {
+      "@type": "Remediaton",
+      "...": "..."
+    }
+  ],
+  "relatedNodes": [
+    {
+      "@type": "DOMNodeDescription",
+      "...": "..."
+    },
+    {
+      "@type": "DOMNodeDescription",
+      "...": "..."
+    }
+  ]
 }
 ```
 
@@ -292,44 +321,46 @@ A NodeTestResult describes if a node that is applicable in an accessibility test
   "@id": "ApplicableNodeResult",
   "@type": "Class",
   "comment": "",
-  "properties": [{
-    "@id": "meetsExpectation",
-    "@type": "Property",
-    "rangeIncludes": "Boolean",
-    "comment": ""
-  }, {
-    "@id": "impact",
-    "@type": "Property",
-    "rangeIncludes": "ImpactValue",
-    "comment": ""
-  }, {
-    "@id": "targetNode",
-    "@type": "Property",
-    "rangeIncludes": "NodeDescription",
-    "comment": ""
-  }, {
-    "@id": "relatedNodes",
-    "@type": "Property",
-    "rangeIncludes": "NodeDescription",
-    "comment": ""
-  }, {
-    "@id": "remediation",
-    "@type": "Property",
-    "rangeIncludes": "Remediation",
-    "comment": ""
-  }]
+  "properties": [
+    {
+      "@id": "meetsExpectation",
+      "@type": "Property",
+      "rangeIncludes": "Boolean",
+      "comment": ""
+    },
+    {
+      "@id": "impact",
+      "@type": "Property",
+      "rangeIncludes": "ImpactValue",
+      "comment": ""
+    },
+    {
+      "@id": "targetNode",
+      "@type": "Property",
+      "rangeIncludes": "NodeDescription",
+      "comment": ""
+    },
+    {
+      "@id": "relatedNodes",
+      "@type": "Property",
+      "rangeIncludes": "NodeDescription",
+      "comment": ""
+    },
+    {
+      "@id": "remediation",
+      "@type": "Property",
+      "rangeIncludes": "Remediation",
+      "comment": ""
+    }
+  ]
 }
 ```
 
-
 ### Remediation
-
-
 
 ### NodeDescription
 
 NodeDescription is used to describe identifying characteristics of a node in a user interface. Which characteristics are needed depends on what platform. NodeDescription is an abstract type from which platform specific types can be extended. See [Platform Specific Types](#platform-specific-types) for details about different platforms.
-
 
 ### ImpactValue
 
@@ -353,11 +384,10 @@ Abstract types in the base AXRL spec have been extended for different platforms,
 For details see [AXRL for web](web.md).
 
 | Abstract type       | Web type                                        |
-|---------------------|-------------------------------------------------|
+| ------------------- | ----------------------------------------------- |
 | SoftwareDescription | [WebSiteDescription](web.md#WebSiteDescription) |
 | UIDescription       | [WebPageDescription](web.md#WebPageDescription) |
 | NodeDescription     | [DOMNodeDescription](web.md#DOMNodeDescription) |
-
 
 ## Test Descriptions
 
@@ -417,7 +447,6 @@ interface Remediation {
 }
 ```
 
-
 ## Audits
 
 ```ts
@@ -428,7 +457,7 @@ interface AuditResult {
   type: 'AuditResult'
   startDate: DateTime
   endDate: DateTime
-   // TODO, Section 508, Air Carrier Access Act (ACAA), WCAG 2.0 Smoke Test, etc.
+  // TODO, Section 508, Air Carrier Access Act (ACAA), WCAG 2.0 Smoke Test, etc.
   // testStandard: AccessibilityStandard
   // The lead auditor, the person or tool responsible for the correctness of the results
   auditor: Auditor
@@ -520,52 +549,52 @@ TODO
 
 ```ts
 interface AxeResults {
-  url: string;
-  timestamp: string;
-  passes: Result[];
-  violations: Result[];
-  incomplete: Result[];
-  inapplicable: Result[];
+  url: string
+  timestamp: string
+  passes: Result[]
+  violations: Result[]
+  incomplete: Result[]
+  inapplicable: Result[]
 }
 
 interface Result {
-  description: string;
-  help: string;
-  helpUrl: string;
-  id: string;
-  impact: ImpactValue;
-  tags: TagValue[];
-  nodes: NodeResult[];
+  description: string
+  help: string
+  helpUrl: string
+  id: string
+  impact: ImpactValue
+  tags: TagValue[]
+  nodes: NodeResult[]
 }
 
 interface NodeResult {
-  html: string;
-  impact: ImpactValue;
-  target: string[];
-  any: CheckResult[];
-  all: CheckResult[];
-  none: CheckResult[];
-  failureSummary?: string;
+  html: string
+  impact: ImpactValue
+  target: string[]
+  any: CheckResult[]
+  all: CheckResult[]
+  none: CheckResult[]
+  failureSummary?: string
 }
 
 interface CheckResult {
-  id: string;
-  impact: string;
-  message: string;
-  data: any;
-  relatedNodes?: RelatedNode[];
+  id: string
+  impact: string
+  message: string
+  data: any
+  relatedNodes?: RelatedNode[]
 }
 
 interface RelatedNode {
-  target: string[];
-  html: string;
+  target: string[]
+  html: string
 }
 ```
-
 
 TODO:
 
 From Comply:
+
 - Accessibility “issue” information
   - axe result data
   - application mapped severity

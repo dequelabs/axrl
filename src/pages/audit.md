@@ -26,16 +26,17 @@ Larger software often has multiple teams responsible for different parts. For ex
     "name": "Deque Systems",
     "url": "https://deque.com/"
   },
-  "sub_components": [{
-    "@type": "WebSiteDescription",
-    "name": "Attest HTML user guide",
-    "homepage": "https://dequeuniversity.com/guide/attest/",
-    "scope": "https://dequeuniversity.com/guide/attest/*"
-  }]
+  "sub_components": [
+    {
+      "@type": "WebSiteDescription",
+      "name": "Attest HTML user guide",
+      "homepage": "https://dequeuniversity.com/guide/attest/",
+      "scope": "https://dequeuniversity.com/guide/attest/*"
+    }
+  ]
 }
 ```
 
 ### Auditor
-
 
 ### AuditResult
