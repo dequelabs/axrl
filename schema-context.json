@@ -1,0 +1,20 @@
+{
+  "@vocab": "https://axrl.org/schema/#",
+  "@graph": "classes",
+  "schema": "https://schema.org/",
+  "rdfs": "https://www.w3.org/2000/01/rdf-schema#",
+  "dct": "http://purl.org/dc/terms/",
+  "earl": "http://www.w3.org/ns/earl#",
+  "comment": "rdfs:comment",
+  "Class": "schema:Class",
+  "Property": "schema:Property",
+  "Text": "schema:Text",
+  "Boolean": "schema:Boolean",
+  "properties": {
+    "@reverse": "schema:domainIncludes"
+  },
+  "rangeIncludes": {
+    "@id": "schema:rangeIncludes",
+    "@type": "@id"
+  }
+}
