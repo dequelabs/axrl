@@ -1,4 +1,8 @@
-# Accessibility Reporting Language (AXRL)
+---
+path: '/docs/spec'
+date: '2017-11-07'
+title: 'Accessibility Reporting Language (AXRL)'
+---
 
 ## Single run example
 
@@ -64,8 +68,7 @@ The following is an example of a test for a single page, such as that produced b
           ],
           "remediation": [
             {
-              "@type": "Remediation",
-              "category": "all",
+              "@type": "ResolveAll",
               "message": "fix the following",
               "remediation": [
                 "Document has multiple static elements with the same id attribute"
@@ -78,7 +81,7 @@ The following is an example of a test for a single page, such as that produced b
           "@type": "ApplicableNodeResult",
           "meetsRequirement": true, // This node passed
           "impact": null,
-          "node": {
+          "targetNode": {
             "html": "<div>...</div>",
             "selector": ["div"]
           }

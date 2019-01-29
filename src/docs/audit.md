@@ -1,5 +1,5 @@
 ---
-path: '/audit'
+path: '/docs/audit'
 date: '2017-11-07'
 title: 'AXRL Audits'
 ---

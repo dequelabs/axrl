@@ -1,3 +1,37 @@
+.mainNav ul {
+  display: flex;
+  padding: 0;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 2.5em;
+}
+.mainNav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mainNav a {
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+}
+
+.layoutSize {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0077c8;
+}
+
+/* Default */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5,6 +39,7 @@ html {
 }
 body {
   margin: 0;
+  font-size: 16px;
 }
 article,
 aside,

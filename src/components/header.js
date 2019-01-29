@@ -5,29 +5,43 @@ import React from 'react'
 const Header = ({ siteTitle }) => (
   <div
     style={{
-      background: `rebeccapurple`,
+      background: `#003349`,
       marginBottom: `1.45rem`
     }}
   >
     <div
+      className="layoutSize"
+      style={{ padding: `1.45rem 1.0875rem` }}
+    >
+      <Link
+        to="/"
+        style={{
+          color: `white`,
+          fontSize: '1.3em',
+          textDecoration: `none`
+        }}
+      >
+        {siteTitle}
+      </Link>
+    </div>
+    <nav
+      className="mainNav"
       style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`
+        background: '#0077c8'
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+      <ul className="layoutSize">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/docs/audit">Using AXRL</Link>
+        </li>
+        <li>
+          <Link to="/docs/base">Specification</Link>
+        </li>
+      </ul>
+    </nav>
   </div>
 )
 

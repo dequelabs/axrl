@@ -1,4 +1,8 @@
-# AXRL as Test Case Language
+---
+path: '/docs/test-cases'
+date: '2017-11-07'
+title: 'AXRL as Test Case Language'
+---
 
 AXRL can be used to describe test cases for automated testing. By expressing test cases using the same language as the output format of accessibility tests we gain the ability to run automated tools against accessibility information produced by SMEs. This has a number of benefits:
 

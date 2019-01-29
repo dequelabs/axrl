@@ -1,3 +1,6 @@
+# formats
+formats/*
+
 # Logs
 logs
 *.log
