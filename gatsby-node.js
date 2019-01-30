@@ -1,13 +1,13 @@
 const path = require('path')
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(
+  const pageTemplate = path.resolve(
     `src/components/pageTemplate.js`
   )
 
-  return graphql(`
+  const result = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -22,21 +22,20 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
+  `)
+  if (result.errors) {
+    return Promise.reject(result.errors)
+  }
 
-    result.data.allMarkdownRemark.edges.forEach(
-      ({ node }) => {
-        createPage({
-          path: node.frontmatter.path,
-          component: blogPostTemplate,
-          context: {} // additional data can be passed via context
-        })
-      }
-    )
-  })
+  result.data.allMarkdownRemark.edges.forEach(
+    ({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: pageTemplate,
+        context: {} // additional data can be passed via context
+      })
+    }
+  )
 }
 
 // Replacing '/' would result in empty string which is invalid

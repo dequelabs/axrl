@@ -1,0 +1,72 @@
+{
+  "@context": {
+    "@base": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "http://schema.org/",
+    "comment": "rdfs:comment",
+    "label": "rdfs:label",
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    },
+    "rangeIncludes": {
+      "@id": "rdfs:rangeIncludes",
+      "@type": "@id"
+    },
+    "Class": "rdf:Class",
+    "properties": {
+      "@reverse": "schema:domainIncludes",
+      "@type": "@id"
+    },
+    "url": "@id",
+    "type": "@type"
+  },
+  "@graph": [
+    {
+      "url": "https://axrl.org/Result",
+      "type": "Class",
+      "label": "TestResult",
+      "comment": "The result of a test.",
+      "properties": ["description", "summary", "helpUrl"]
+    },
+    {
+      "url": "https://axrl.org/TestSuccess",
+      "type": "Class",
+      "label": "TestSuccess",
+      "comment": "The result of successful a test.",
+      "subClassOf": "TestResult",
+      "properties": ["node", "relatedNodes"]
+    },
+    {
+      "url": "https://axrl.org/TestSkip",
+      "type": "Class",
+      "label": "TestSkip",
+      "comment": "The result of skipping a test.",
+      "subClassOf": "TestResult",
+      "properties": ["node", "relatedNodes"]
+    },
+    {
+      "url": "https://axrl.org/TestFailure",
+      "type": "Class",
+      "label": "TestFailure",
+      "comment": "The result of failed a test.",
+      "subClassOf": "TestResult",
+      "properties": [
+        "node",
+        "relatedNodes",
+        "impact",
+        "remediation"
+      ]
+    },
+    {
+      "url": "https://axrl.org/TestAbort",
+      "type": "Class",
+      "label": "TestAbort",
+      "comment": "The result of a test that was not completed.",
+      "subClassOf": "TestResult",
+      "properties": ["node", "relatedNodes"]
+    }
+  ]
+}
