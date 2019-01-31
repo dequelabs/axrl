@@ -35,10 +35,10 @@ const Header = ({ siteTitle }) => (
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/docs/audit">Using AXRL</Link>
+          <Link to="/examples">Examples</Link>
         </li>
         <li>
-          <Link to="/docs/base">Specification</Link>
+          <Link to="/docs/base">Schema</Link>
         </li>
       </ul>
     </nav>

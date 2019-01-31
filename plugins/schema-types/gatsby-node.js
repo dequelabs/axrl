@@ -1,12 +1,12 @@
 const path = require('path')
-const data = require('../../src/data/classes.json')
+const { getClassDescriptions } = require('../../src/schema')
 
 exports.createPages = ({ boundActionCreators }) => {
   const { createPage } = boundActionCreators
   // Create pages for each JSON entry.
-  data['@graph'].forEach(classData => {
+  getClassDescriptions().forEach(classData => {
     createPage({
-      path: classData.label,
+      path: classData.id,
       component: path.resolve(
         `src/components/TypeDescription.js`
       ),

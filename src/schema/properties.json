@@ -1,0 +1,52 @@
+{
+  "@graph": [
+    {
+      "id": "description",
+      "@type": "Property",
+      "comment": "Description of the (part of the) requirement that was tested",
+      "rangeIncludes": ["schema:Text"]
+    },
+    {
+      "id": "summary",
+      "@type": "Property",
+      "comment": "shortened variation of the description",
+      "rangeIncludes": ["schema:Text"]
+    },
+    {
+      "id": "helpUrl",
+      "@type": "Property",
+      "comment": "URL where more information about the requirement can be found",
+      "rangeIncludes": ["schema:URL"]
+    },
+    {
+      "id": "impact",
+      "@type": "Property",
+      "comment": "Impact of the test result on users: minor, moderate, serious, critical. Impact must only be set if the outcome is failed.",
+      "rangeIncludes": ["ImpactType"]
+    },
+    {
+      "id": "node",
+      "@type": "Property",
+      "comment": "Definition of the node that was tested.",
+      "rangeIncludes": ["Node"]
+    },
+    {
+      "id": "relatedNodes",
+      "@type": "Property",
+      "comment": "A node that along with the tested node lead to the test result",
+      "rangeIncludes": ["Node"]
+    },
+    {
+      "id": "remediation",
+      "@type": "Property",
+      "comment": "A description of one or more solutions to remediate an issue",
+      "rangeIncludes": ["Remediation", "schema:Text"]
+    },
+    {
+      "id": "solutions",
+      "@type": "Property",
+      "comment": "One or more changes that remediate an issue",
+      "rangeIncludes": ["schema:Text"]
+    }
+  ]
+}

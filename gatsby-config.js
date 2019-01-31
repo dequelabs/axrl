@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/axrl',
   siteMetadata: {
     title: `AXRL: Accessibility Report Language`,
     description: `A data format for ICT accessibility testing`,
@@ -35,7 +36,6 @@ module.exports = {
         name: 'docs'
       }
     },
-    // `gatsby-transformer-remark`
     {
       resolve: `gatsby-transformer-remark`,
       options: {

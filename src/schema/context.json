@@ -1,0 +1,23 @@
+{
+  "@base": "http://schema.org/",
+  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "xsd": "http://www.w3.org/2001/XMLSchema#",
+  "schema": "http://schema.org/",
+  "comment": "rdfs:comment",
+  "subClassOf": {
+    "@id": "rdfs:subClassOf",
+    "@type": "@id"
+  },
+  "rangeIncludes": {
+    "@id": "rdfs:rangeIncludes",
+    "@type": "@id"
+  },
+  "Class": "rdf:Class",
+  "properties": {
+    "@reverse": "schema:domainIncludes",
+    "@type": "@id"
+  },
+  "id": "@id",
+  "type": "@type"
+}

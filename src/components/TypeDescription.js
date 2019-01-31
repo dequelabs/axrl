@@ -2,38 +2,37 @@ import React from 'react'
 import Layout from './layout'
 import PropertyTableBody from './PropertyTableBody'
 import {
-  findClassData,
   getClassInheritance,
   getSuperClasses
-} from '../data'
+} from '../schema'
 import TypeLink from './TypeLink'
 
 class TypeDescription extends React.Component {
   render() {
     const classData = this.props.pageContext
-    // const classData = findClassData(this.props.label)
     if (!classData) {
       throw new Error(`Unknown type ${this.props.title}`)
     }
-    const { label, comment, url } = classData
-    const classInheritance = getClassInheritance(label)
+    const { id, comment } = classData
+    const classInheritance = getClassInheritance(id)
+    const url = `https://axrl.org/${id}`
 
     return (
       <Layout>
-        <h1>{label}</h1>
+        <h1>{id}</h1>
         <p>
           Canonical URL: <a href={url}>{url}</a>
         </p>
         <p>
-          {classInheritance.map(({ label }, key) => (
+          {classInheritance.map(({ id }, key) => (
             <span key={key}>
               {key === 0 ? '' : ' > '}
-              <TypeLink type={label} />
+              <TypeLink type={id} />
             </span>
           ))}
         </p>
-
         <p>{comment}</p>
+
         <table>
           <thead>
             <tr>
@@ -42,21 +41,19 @@ class TypeDescription extends React.Component {
               <th>Description</th>
             </tr>
           </thead>
-          {classInheritance
-            .reverse()
-            .map((classData, key) => (
-              <PropertyTableBody
-                classData={classData}
-                key={key}
-              />
-            ))}
+          {classInheritance.reverse().map(classData => (
+            <PropertyTableBody
+              classData={classData}
+              key={classData.id}
+            />
+          ))}
         </table>
 
         <h2>More specific types</h2>
         <ul>
-          {getSuperClasses(label).map(({ label }, key) => (
-            <li>
-              <TypeLink type={label} />
+          {getSuperClasses(id).map(({ id }, key) => (
+            <li key={key}>
+              <TypeLink type={id} />
             </li>
           ))}
         </ul>

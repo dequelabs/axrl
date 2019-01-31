@@ -1,17 +1,20 @@
 import React from 'react'
 import TypeLink from './TypeLink'
-import { findPropertyData, findClassData } from '../data'
+import { findPropertyData } from '../schema'
 
 class PropertyTableBody extends React.Component {
   render() {
-    const { key, classData } = this.props
-    const { label, url, properties } = classData
+    const { classData } = this.props
+    const { id, properties = [] } = classData
+    if (properties.length === 0) {
+      return null
+    }
 
     return (
-      <tbody key={key}>
+      <tbody>
         <tr>
           <th colSpan="3">
-            Properties of <TypeLink type={label} />
+            Properties of <TypeLink type={id} />
           </th>
         </tr>
 

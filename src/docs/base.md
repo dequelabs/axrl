@@ -16,32 +16,28 @@ This example shows the test for example.com, where the test produced 2 results. 
 {
   "@context": "https://axrl.org/context/web-v1.json",
   "@type": "WebPageTest",
-  "url": "http://example.com",
+  "testSubject": "http://example.com",
   "results": [
     {
       "@type": "TestFailure",
-      "impact": "critical",
+      "impact": "Critical",
       "description": "Web pages must have a title",
       "remediation": "Add a title to the web page",
       "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/document-title",
       "node": {
         "@type": "DOMNode",
-        "html": "<html>...</html>",
+        "codeSnippet": "<html>...</html>",
         "selector": "html"
       }
     },
     {
       "@type": "TestSuccess",
-      "test": "axe-core:color-contrast",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/color-contrast",
       "node": {
         "@type": "DOMNode",
-        "html": "<h1>Welcome</h1>",
+        "codeSnippet": "<h1>Welcome</h1>",
         "selector": "h1"
       }
-    },
-    {
-      "type": "TestAbort",
-      "type": "TestSkip"
     }
   ]
 }
@@ -63,23 +59,28 @@ An object's `@type` property defines what that object is. By adding a type to al
 
 ## Types
 
-- [InterfaceTest]
-  - [WebPageTest]
+- [InterfaceTest](/InterfaceTest)
+  - [WebPageTest](/WebPageTest)
 - [TestResult](/TestResult)
   - [TestSuccess](/TestSuccess)
   - [TestFailure](/TestFailure)
   - [TestAbort](/TestAbort)
   - [TestSkip](/TestSkip)
-- [OutcomeType]
-- [ImpactType]
-- [Node]
-  - [DOMNode]
+- [TestSubject](/TestSubject) Open question: Is this the same as the EARL TestSubject?
+  - [HTMLPage](/HTMLPage)
+- [Node](/Node)
+  - [DOMNode](/DOMNode)
+- [ImpactType](/ImpactType)
+  - [Critical](/Critical)
+  - [Serious](/Serious)
+  - [Moderate](/Moderate)
+  - [Minor](/Minor)
+- [Remediation](/Remediation)
+  - [RemediateAll](/RemediationAll)
 - [TestScope]
   - [HTMLPageScope]
 - [TestEnvironment]
   - [BrowserSetup]
-- [Interface]
-  - [WebPage]
 - [AccessibilityTester]
 - [TestConfiguration]
 
@@ -91,12 +92,12 @@ An object's `@type` property defines what that object is. By adding a type to al
   "@type": "WebPageTest",
   "timestamp": "2018-09-25T10:04:13.274Z",
   "testSubject": {
-    "@type": "WebPage",
+    "@type": "HTMLPage",
     "url": "https://deque.com",
     "state": "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
   },
   "scope": {
-    "@type": "axe-core-api:#include-exclude-object",
+    "@type": "HTMLPageScope",
     "exclude": ["#footer"]
   },
   "environment": {
@@ -107,7 +108,7 @@ An object's `@type` property defines what that object is. By adding a type to al
     "windowHeight": 1024
   },
   "tester": {
-    "@type": "AccessibilityTestTool",
+    "@type": "Software",
     "@id": "https://github.com/dequelabs/axe-core/releases/tag/v3.1.2",
     "name": "axe-core",
     "release": "3.1.2",
@@ -116,12 +117,12 @@ An object's `@type` property defines what that object is. By adding a type to al
   "results": [
     {
       "@type": "TestFailure",
-      "impact": "moderate",
+      "impact": "Moderate",
       "description": "Web pages must have a title",
       "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/document-title",
       "node": {
         "@type": "DOMNode",
-        "html": "<html>...</html>",
+        "codeSnippet": "<html>...</html>",
         "selector": ":root"
       },
       "remediation": "Add a <title> element to <head>",
@@ -133,23 +134,22 @@ An object's `@type` property defines what that object is. By adding a type to al
       "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/video-caption",
       "node": {
         "@type": "DOMNode",
-        "html": "<div>...</div>",
+        "codeSnippet": "<div>...</div>",
         "selector": "..."
       }
     },
     {
       "@type": "TestSkip",
       "description": "Video elements have a caption",
-      "testDetails": "https://dequeuniversity.com/rules/axe/3.1/video-caption"
+      "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/video-caption"
     },
     {
       "@type": "TestAbort",
-      "test": "axe-core:3.1/video-caption",
       "description": "Video elements have a caption",
       "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/video-caption",
       "node": {
         "@type": "DOMNode",
-        "html": "<div>...</div>",
+        "codeSnippet": "<div>...</div>",
         "selector": "..."
       }
     }

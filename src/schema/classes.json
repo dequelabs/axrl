@@ -1,0 +1,132 @@
+{
+  "@graph": [
+    {
+      "id": "TestResult",
+      "type": "Class",
+      "comment": "The result of a test.",
+      "properties": ["description", "summary", "helpUrl"]
+    },
+    {
+      "id": "TestSuccess",
+      "type": "Class",
+      "comment": "The result of successful a test.",
+      "subClassOf": "TestResult",
+      "properties": ["node", "relatedNodes"]
+    },
+    {
+      "id": "TestSkip",
+      "type": "Class",
+      "comment": "The result of skipping a test.",
+      "subClassOf": "TestResult",
+      "properties": ["node", "relatedNodes"]
+    },
+    {
+      "id": "TestFailure",
+      "type": "Class",
+      "comment": "The result of failed a test.",
+      "subClassOf": "TestResult",
+      "properties": [
+        "node",
+        "relatedNodes",
+        "impact",
+        "remediation"
+      ]
+    },
+    {
+      "id": "TestAbort",
+      "type": "Class",
+      "comment": "The result of a test that was not completed.",
+      "subClassOf": "TestResult",
+      "properties": ["node", "relatedNodes"]
+    },
+    {
+      "id": "InterfaceTest",
+      "type": "Class",
+      "comment": "A single test of an interface in a particular state.",
+      "properties": [
+        "scope",
+        "tester",
+        "configuration",
+        "environment",
+        "result",
+        "timestamp",
+        "testSubject"
+      ]
+    },
+    {
+      "id": "WebPageTest",
+      "type": "Class",
+      "subClassOf": "InterfaceTest",
+      "comment": "A single test of a web page in a particular state."
+    },
+    {
+      "id": "TestSubject",
+      "type": "Class",
+      "comment": "The some interface that tests can be performed on"
+    },
+    {
+      "id": "HTMLPage",
+      "type": "Class",
+      "subClassOf": "TestSubject",
+      "comment": "An HTML page that tests can be performed on"
+    },
+    {
+      "id": "ImpactType",
+      "type": "Class",
+      "comment": "An issue hinders the use of an interface to some degree"
+    },
+    {
+      "id": "Critical",
+      "type": "Class",
+      "subClassOf": "ImpactType",
+      "comment": "An issue that stops users from accessing information or functionality"
+    },
+    {
+      "id": "Serious",
+      "type": "Class",
+      "subClassOf": "ImpactType",
+      "comment": "An issue that can make functionality difficult to use, or content difficult to understand"
+    },
+    {
+      "id": "Moderate",
+      "type": "Class",
+      "subClassOf": "ImpactType",
+      "comment": "An issue that can make functionality frustrating to use"
+    },
+    {
+      "id": "Minor",
+      "type": "Class",
+      "subClassOf": "ImpactType",
+      "comment": "An issue that has little to no impact on users"
+    },
+    {
+      "id": "Node",
+      "type": "Class",
+      "comment": "TODO"
+    },
+    {
+      "id": "DOMNode",
+      "type": "Class",
+      "subClassOf": "Node",
+      "comment": "A description of a node in the DOM",
+      "properties": [
+        "codeSnippet",
+        "selector",
+        "semanticRole",
+        "accessibleName"
+      ]
+    },
+    {
+      "id": "Remediation",
+      "type": "Class",
+      "comment": "Fix any of the solutions to resolve the failure",
+      "properties": ["solutions"]
+    },
+    {
+      "id": "RemediationAll",
+      "type": "Class",
+      "subClassOf": "Remediation",
+      "comment": "Fix all of the solutions to resolve the failure"
+    }
+  ]
+}

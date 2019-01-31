@@ -6,10 +6,14 @@ import SEO from '../components/seo'
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
+    <h1>Page not found</h1>
+    <p>Sorry, please go back and try some again.</p>
     <p>
-      You just hit a route that doesn&#39;t exist... the
-      sadness.
+      To report an issue, go to{' '}
+      <a href="https://github.com/dequelabs/axrl/issues">
+        Github issues
+      </a>
+      .
     </p>
   </Layout>
 )
