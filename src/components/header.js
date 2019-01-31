@@ -3,33 +3,13 @@ import PropTypes from 'prop-types'
 import React from 'react'
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: `#003349`,
-      marginBottom: `1.45rem`
-    }}
-  >
-    <div
-      className="layoutSize"
-      style={{ padding: `1.45rem 1.0875rem` }}
-    >
-      <Link
-        to="/"
-        style={{
-          color: `white`,
-          fontSize: '1.3em',
-          textDecoration: `none`
-        }}
-      >
+  <header>
+    <div className="layoutSize">
+      <Link to="/" className="brand">
         {siteTitle}
       </Link>
     </div>
-    <nav
-      className="mainNav"
-      style={{
-        background: '#0077c8'
-      }}
-    >
+    <nav className="mainNav">
       <ul className="layoutSize">
         <li>
           <Link to="/">Home</Link>
@@ -38,11 +18,16 @@ const Header = ({ siteTitle }) => (
           <Link to="/examples">Examples</Link>
         </li>
         <li>
-          <Link to="/docs/base">Schema</Link>
+          <Link to="/docs/schema">Schema</Link>
+        </li>
+        <li>
+          <a href="https://github.com/dequelabs/axrl/issues">
+            Give feedback
+          </a>
         </li>
       </ul>
     </nav>
-  </div>
+  </header>
 )
 
 Header.propTypes = {

@@ -11,7 +11,7 @@ class IndexPage extends React.Component {
   }
   render() {
     return (
-      <Layout>
+      <Layout title="AXRL Examples">
         <h1>AXRL Examples</h1>
 
         <h2>Example: A basic web page test</h2>

@@ -50,7 +50,8 @@
         "environment",
         "result",
         "timestamp",
-        "testSubject"
+        "testSubject",
+        "testSubjectState"
       ]
     },
     {

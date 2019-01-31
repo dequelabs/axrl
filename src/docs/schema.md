@@ -1,6 +1,5 @@
 ---
-path: '/docs/base'
-date: '2017-11-07'
+path: '/docs/schema'
 title: 'Accessibility Reporting Language'
 ---
 

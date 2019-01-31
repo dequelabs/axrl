@@ -18,7 +18,7 @@ class TypeDescription extends React.Component {
     const url = `https://axrl.org/${id}`
 
     return (
-      <Layout>
+      <Layout title={id}>
         <h1>{id}</h1>
         <p>
           Canonical URL: <a href={url}>{url}</a>

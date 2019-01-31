@@ -28,7 +28,7 @@
       "id": "node",
       "@type": "Property",
       "comment": "Definition of the node that was tested.",
-      "rangeIncludes": ["Node"]
+      "rangeIncludes": ["Node", "Selector"]
     },
     {
       "id": "relatedNodes",

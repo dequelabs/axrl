@@ -1,3 +1,11 @@
+.brand {
+  color: white;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+.mainNav {
+  background: #0077c8;
+}
 .mainNav ul {
   display: flex;
   padding: 0;
@@ -15,13 +23,21 @@
   text-decoration: none;
   padding: 1em;
 }
-
 .layoutSize {
   margin-left: auto;
   margin-right: auto;
   max-width: 960px;
+  padding: 1.45rem 1.0875rem;
 }
-
+header {
+  background: #003349;
+  margin-bottom: 1.45rem;
+}
+main {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0px 1.0875rem 1.45rem;
+}
 h1,
 h2,
 h3,
@@ -447,8 +463,9 @@ pre {
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  background: hsla(0, 0%, 0%, 0.02);
   border-radius: 3px;
+  border: solid 1px hsla(0, 0%, 0%, 0.06);
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
@@ -553,7 +570,7 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: 0.2em;
 }
 ol li {
   padding-left: 0;
@@ -563,13 +580,13 @@ ul li {
 }
 li > ol {
   margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
 }
 li > ul {
   margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
 }
 blockquote *:last-child {
   margin-bottom: 0;
@@ -581,7 +598,7 @@ p *:last-child {
   margin-bottom: 0;
 }
 li > p {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: 0.2em;
 }
 code {
   font-size: 0.85rem;
@@ -634,7 +651,7 @@ td:last-child {
 }
 tt,
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
+  background-color: hsla(0, 0%, 0%, 0.02);
   border-radius: 3px;
   font-family: 'SFMono-Regular', Consolas, 'Roboto Mono',
     'Droid Sans Mono', 'Liberation Mono', Menlo, Courier,

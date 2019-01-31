@@ -1,6 +1,7 @@
 {
   "@context": "https://axrl.org/context/web-v1.json",
   "@type": "HTMLPage",
+  "url": "https://deque.com",
   "tests": [
     {
       "@type": "WebPageTest",

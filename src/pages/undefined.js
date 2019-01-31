@@ -7,7 +7,7 @@ import {
 
 const UndefinedPropertiesPage = () => {
   return (
-    <Layout>
+    <Layout title="A list of undefined properties">
       <h1>A list of undefined properties</h1>
       <ul>
         {getUndefinedProperties().map((property, key) => (

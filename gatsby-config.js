@@ -3,7 +3,8 @@ module.exports = {
   siteMetadata: {
     title: `AXRL: Accessibility Report Language`,
     description: `A data format for ICT accessibility testing`,
-    author: `Wilco Fiers`
+    author: `Wilco Fiers`,
+    lang: 'en-US'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

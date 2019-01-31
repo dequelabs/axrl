@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import Meta from './Meta'
 import './layout.css'
 import './prism-a11y.css'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, title, pageContext = {} }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -19,24 +20,17 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <Meta title={title || pageContext.title} />
         <Header siteTitle={data.site.siteMetadata.title} />
-        <main
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0
-          }}
-        >
-          {children}
-        </main>
+        <main>{children}</main>
       </>
     )}
   />
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired
 }
 
 export default Layout

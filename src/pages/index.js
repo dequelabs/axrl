@@ -9,7 +9,7 @@ class IndexPage extends React.Component {
   }
   render() {
     return (
-      <Layout>
+      <Layout title="what is AXRL">
         <h1>What is AXRL</h1>
         <p>
           Accessibility Reporting Language (AXRL) is a data
@@ -21,6 +21,16 @@ class IndexPage extends React.Component {
           technologies, it could also be expressed in other
           formats.
         </p>
+        <p>
+          AXRL will include classes for the following
+          platforms:
+        </p>
+        <ul>
+          <li>Web / HTML</li>
+          <li>Android</li>
+          <li>iOS</li>
+          <li>Windows</li>
+        </ul>
         <h2>Example: A basic web page test</h2>
         <p>
           This example shows the test for example.com, where

@@ -21,7 +21,7 @@ class PropertyTableBody extends React.Component {
         {properties.map((propertyName, key) => {
           const {
             url = propertyName,
-            rangeIncludes = [],
+            rangeIncludes = ['TODO'],
             comment = 'TODO'
           } = findPropertyData(propertyName) || {}
           return (
