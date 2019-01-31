@@ -1,0 +1,1 @@
+{"pageContext":{"id":"TestFailure","type":"Class","comment":"The result of failed a test.","subClassOf":"TestResult","properties":["node","relatedNodes","impact","remediation"]}}

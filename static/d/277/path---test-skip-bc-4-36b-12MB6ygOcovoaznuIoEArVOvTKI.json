@@ -1,0 +1,1 @@
+{"pageContext":{"url":"https://axrl.org/TestSkip","type":"Class","label":"TestSkip","comment":"The result of skipping a test.","subClassOf":"TestResult","properties":["node","relatedNodes"]}}

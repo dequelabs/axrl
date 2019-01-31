@@ -1,0 +1,1 @@
+{"pageContext":{"url":"https://axrl.org/TestFailure","type":"Class","label":"TestFailure","comment":"The result of failed a test.","subClassOf":"TestResult","properties":["node","relatedNodes","impact","remediation"]}}

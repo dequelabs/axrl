@@ -1,0 +1,1 @@
+{"pageContext":{"url":"https://axrl.org/TestAbort","type":"Class","label":"TestAbort","comment":"The result of a test that was not completed.","subClassOf":"TestResult","properties":["node","relatedNodes"]}}

@@ -1,0 +1,1 @@
+{"pageContext":{"url":"https://axrl.org/TestSuccess","type":"Class","label":"TestSuccess","comment":"The result of successful a test.","subClassOf":"TestResult","properties":["node","relatedNodes"]}}

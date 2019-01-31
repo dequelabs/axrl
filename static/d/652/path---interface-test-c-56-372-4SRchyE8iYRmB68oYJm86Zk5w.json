@@ -1,0 +1,1 @@
+{"pageContext":{"url":"https://axrl.org/InterfaceTest","type":"Class","label":"InterfaceTest","comment":"A single test of an interface in a particular state.","properties":["scope","tester","configuration","environment","result","timestamp","testSubject"]}}
