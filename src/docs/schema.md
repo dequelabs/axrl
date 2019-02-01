@@ -58,24 +58,24 @@ An object's `@type` property defines what that object is. By adding a type to al
 
 ## Types
 
-- [InterfaceTest](/InterfaceTest)
-  - [WebPageTest](/WebPageTest)
-- [TestResult](/TestResult)
-  - [TestSuccess](/TestSuccess)
-  - [TestFailure](/TestFailure)
-  - [TestAbort](/TestAbort)
-  - [TestSkip](/TestSkip)
-- [TestSubject](/TestSubject) Open question: Is this the same as the EARL TestSubject?
-  - [HTMLPage](/HTMLPage)
-- [Node](/Node)
-  - [DOMNode](/DOMNode)
-- [ImpactType](/ImpactType)
-  - [Critical](/Critical)
-  - [Serious](/Serious)
-  - [Moderate](/Moderate)
-  - [Minor](/Minor)
-- [Remediation](/Remediation)
-  - [RemediateAll](/RemediationAll)
+- [InterfaceTest](../../InterfaceTest)
+  - [WebPageTest](../../WebPageTest)
+- [TestResult](../../TestResult)
+  - [TestSuccess](../../TestSuccess)
+  - [TestFailure](../../TestFailure)
+  - [TestAbort](../../TestAbort)
+  - [TestSkip](../../TestSkip)
+- [TestSubject](../../TestSubject) Open question: Is this the same as the EARL TestSubject?
+  - [HTMLPage](../../HTMLPage)
+- [Node](../../Node)
+  - [DOMNode](../../DOMNode)
+- [ImpactType](../../ImpactType)
+  - [Critical](../../Critical)
+  - [Serious](../../Serious)
+  - [Moderate](../../Moderate)
+  - [Minor](../../Minor)
+- [Remediation](../../Remediation)
+  - [RemediateAll](../../RemediationAll)
 - [TestScope]
   - [HTMLPageScope]
 - [TestEnvironment]
