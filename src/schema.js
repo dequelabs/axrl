@@ -34,10 +34,24 @@ function getClassDescriptions() {
   return classes['@graph']
 }
 
+function getClassHierarchy(parentClass) {
+  const subclasses = getClassDescriptions().filter(
+    ({ subClassOf }) => subClassOf === parentClass
+  )
+
+  return subclasses.map(classDefinition => {
+    return {
+      subclasses: getClassHierarchy(classDefinition.id),
+      ...classDefinition
+    }
+  })
+}
+
 module.exports = {
   findClassData,
   findPropertyData,
   getClassInheritance,
   getSuperClasses,
-  getClassDescriptions
+  getClassDescriptions,
+  getClassHierarchy
 }

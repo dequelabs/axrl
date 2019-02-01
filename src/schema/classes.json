@@ -128,6 +128,38 @@
       "type": "Class",
       "subClassOf": "Remediation",
       "comment": "Fix all of the solutions to resolve the failure"
+    },
+    {
+      "id": "TestScope",
+      "type": "Class",
+      "comment": "TODO"
+    },
+    {
+      "id": "HTMLPageScope",
+      "type": "Class",
+      "subClassOf": "TestScope",
+      "comment": "TODO"
+    },
+    {
+      "id": "TestEnvironment",
+      "type": "Class",
+      "comment": "TODO"
+    },
+    {
+      "id": "BrowserSetup",
+      "type": "Class",
+      "subClassOf": "TestEnvironment",
+      "comment": "TODO"
+    },
+    {
+      "id": "AccessibilityTester",
+      "type": "Class",
+      "comment": "TODO"
+    },
+    {
+      "id": "TestConfiguration",
+      "type": "Class",
+      "comment": "TODO"
     }
   ]
 }

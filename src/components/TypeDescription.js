@@ -27,7 +27,7 @@ class TypeDescription extends React.Component {
           {classInheritance.map(({ id }, key) => (
             <span key={key}>
               {key === 0 ? '' : ' > '}
-              <TypeLink type={id} />
+              <TypeLink to={id} />
             </span>
           ))}
         </p>
@@ -53,7 +53,7 @@ class TypeDescription extends React.Component {
         <ul>
           {getSuperClasses(id).map(({ id }, key) => (
             <li key={key}>
-              <TypeLink type={id} />
+              <TypeLink to={id} />
             </li>
           ))}
         </ul>

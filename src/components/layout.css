@@ -580,18 +580,15 @@ ul li {
 }
 li > ol {
   margin-left: 1.45rem;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.8em;
   margin-top: 0.2em;
 }
 li > ul {
   margin-left: 1.45rem;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.8em;
   margin-top: 0.2em;
 }
 blockquote *:last-child {
-  margin-bottom: 0;
-}
-li *:last-child {
   margin-bottom: 0;
 }
 p *:last-child {

@@ -14,7 +14,7 @@ class PropertyTableBody extends React.Component {
       <tbody>
         <tr>
           <th colSpan="3">
-            Properties of <TypeLink type={id} />
+            Properties of <TypeLink to={id} />
           </th>
         </tr>
 

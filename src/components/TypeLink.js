@@ -3,9 +3,9 @@ import { Link } from 'gatsby'
 
 class TypeLink extends React.Component {
   render() {
-    const { type } = this.props
-    const url = '/' + type
-    const linkText = type
+    const { to } = this.props
+    const url = '/' + to
+    const linkText = to
     return <Link to={url}>{linkText}</Link>
   }
 }

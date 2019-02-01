@@ -1,12 +1,9 @@
 import React from 'react'
 import Layout from '../components/layout'
+import { PrismJSON } from '../components/Prism'
 import simpleExample from '../examples/simple.json'
-import Prism from 'prismjs'
 
 class IndexPage extends React.Component {
-  componentDidMount() {
-    Prism.highlightAll()
-  }
   render() {
     return (
       <Layout title="what is AXRL">
@@ -37,11 +34,7 @@ class IndexPage extends React.Component {
           the test produced 2 results. One of the results is
           "failed", and the second is "passed".
         </p>
-        <pre>
-          <code className="language-javascript">
-            {JSON.stringify(simpleExample, null, 2)}
-          </code>
-        </pre>
+        <PrismJSON code={simpleExample} />
       </Layout>
     )
   }
