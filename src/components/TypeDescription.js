@@ -1,11 +1,9 @@
 import React from 'react'
 import Layout from './layout'
-import PropertyTableBody from './PropertyTableBody'
-import {
-  getClassInheritance,
-  getSuperClasses
-} from '../schema'
+import { getClassInheritance } from '../schema'
 import TypeLink from './TypeLink'
+import ClassDescription from './ClassDescription'
+import PropertyDescription from './PropertyDescription'
 
 class TypeDescription extends React.Component {
   render() {
@@ -13,13 +11,19 @@ class TypeDescription extends React.Component {
     if (!classData) {
       throw new Error(`Unknown type ${this.props.title}`)
     }
-    const { id, comment } = classData
+    const { label, id, comment, type } = classData
     const classInheritance = getClassInheritance(id)
     const url = `https://axrl.org/${id}`
+    const typeDescription =
+      type === 'Class' ? (
+        <ClassDescription className={id} />
+      ) : (
+        <PropertyDescription propName={id} />
+      )
 
     return (
       <Layout title={id}>
-        <h1>{id}</h1>
+        <h1>{label || id}</h1>
         <p>
           Canonical URL: <a href={url}>{url}</a>
         </p>
@@ -32,31 +36,7 @@ class TypeDescription extends React.Component {
           ))}
         </p>
         <p>{comment}</p>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Property</th>
-              <th>Expected Type</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          {classInheritance.reverse().map(classData => (
-            <PropertyTableBody
-              classData={classData}
-              key={classData.id}
-            />
-          ))}
-        </table>
-
-        <h2>More specific types</h2>
-        <ul>
-          {getSuperClasses(id).map(({ id }, key) => (
-            <li key={key}>
-              <TypeLink to={id} />
-            </li>
-          ))}
-        </ul>
+        {typeDescription}
         {this.props.children}
       </Layout>
     )

@@ -1,7 +1,7 @@
 {
   "@context": "https://axrl.org/context/web-v1.json",
   "@type": "PageTest",
-  "testSubject": "http://example.com",
+  "subject": "http://example.com",
   "results": [
     {
       "@type": "TestFailure",

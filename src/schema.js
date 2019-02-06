@@ -31,11 +31,18 @@ function getSuperClasses(type) {
 }
 
 function getPropertyDescriptions() {
-  return properties['@graph']
+  return [...properties['@graph']]
 }
 
 function getClassDescriptions() {
-  return classes['@graph']
+  return [...classes['@graph']]
+}
+
+function getTypeDescriptions() {
+  return [
+    ...getPropertyDescriptions(),
+    ...getClassDescriptions()
+  ]
 }
 
 function getClassHierarchy(parentClass) {
@@ -63,5 +70,6 @@ module.exports = {
   getSuperClasses,
   getClassDescriptions,
   getPropertyDescriptions,
+  getTypeDescriptions,
   getClassHierarchy
 }
