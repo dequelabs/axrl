@@ -1,6 +1,55 @@
 {
   "@graph": [
     {
+      "id": "InterfaceTest",
+      "type": "Class",
+      "comment": "A single test of an generic interface in a particular state.",
+      "properties": [
+        "result",
+        "testSubject",
+        "state",
+        "scope",
+        "timestamp",
+        "environment",
+        "testEngine",
+        "engineOptions",
+        "testRunner"
+      ]
+    },
+    {
+      "id": "web/PageTest",
+      "type": "Class",
+      "subClassOf": "InterfaceTest",
+      "label": "PageTest (web)",
+      "comment": "A single test of a web page in a particular state."
+    },
+    {
+      "id": "ios/UIControllerTest",
+      "type": "Class",
+      "subClassOf": "InterfaceTest",
+      "label": "UIControllerTest (iOS)",
+      "comment": "A single test of a web page in a particular state."
+    },
+    {
+      "id": "TestSubject",
+      "type": "Class",
+      "comment": "The some interface that tests can be performed on"
+    },
+    {
+      "id": "web/HTMLPage",
+      "type": "Class",
+      "subClassOf": "TestSubject",
+      "label": "HTMLPage (web)",
+      "comment": "An HTML page that tests can be performed on"
+    },
+    {
+      "id": "ios/UIViewController",
+      "type": "Class",
+      "subClassOf": "TestSubject",
+      "label": "UIViewController (iOS)",
+      "comment": "TODO"
+    },
+    {
       "id": "TestResult",
       "type": "Class",
       "comment": "The result of a test.",
@@ -14,9 +63,9 @@
       "properties": ["node", "relatedNodes"]
     },
     {
-      "id": "TestSkip",
+      "id": "TestInapplicable",
       "type": "Class",
-      "comment": "The result of skipping a test.",
+      "comment": "The result of an inapplicable test.",
       "subClassOf": "TestResult",
       "properties": ["node", "relatedNodes"]
     },
@@ -38,38 +87,6 @@
       "comment": "The result of a test that was not completed.",
       "subClassOf": "TestResult",
       "properties": ["node", "relatedNodes"]
-    },
-    {
-      "id": "InterfaceTest",
-      "type": "Class",
-      "comment": "A single test of an interface in a particular state.",
-      "properties": [
-        "scope",
-        "tester",
-        "configuration",
-        "environment",
-        "result",
-        "timestamp",
-        "testSubject",
-        "testSubjectState"
-      ]
-    },
-    {
-      "id": "WebPageTest",
-      "type": "Class",
-      "subClassOf": "InterfaceTest",
-      "comment": "A single test of a web page in a particular state."
-    },
-    {
-      "id": "TestSubject",
-      "type": "Class",
-      "comment": "The some interface that tests can be performed on"
-    },
-    {
-      "id": "HTMLPage",
-      "type": "Class",
-      "subClassOf": "TestSubject",
-      "comment": "An HTML page that tests can be performed on"
     },
     {
       "id": "ImpactType",
@@ -103,19 +120,28 @@
     {
       "id": "Node",
       "type": "Class",
-      "comment": "TODO"
-    },
-    {
-      "id": "DOMNode",
-      "type": "Class",
-      "subClassOf": "Node",
-      "comment": "A description of a node in the DOM",
+      "comment": "A generalised node, or component in a user interface",
       "properties": [
-        "codeSnippet",
-        "selector",
+        "screenshot",
         "semanticRole",
         "accessibleName"
       ]
+    },
+    {
+      "id": "web/DOMNode",
+      "type": "Class",
+      "subClassOf": "Node",
+      "label": "DOMNode (web)",
+      "comment": "A description of a node in the DOM",
+      "properties": ["codeSnippet", "web/selector"]
+    },
+    {
+      "id": "ios/UIView",
+      "type": "Class",
+      "subClassOf": "Node",
+      "label": "UIView (iOS)",
+      "comment": "TODO",
+      "properties": ["todo"]
     },
     {
       "id": "Remediation",
@@ -132,32 +158,96 @@
     {
       "id": "TestScope",
       "type": "Class",
-      "comment": "TODO"
+      "comment": "A generalised description of one or more areas in a user interface"
     },
     {
-      "id": "HTMLPageScope",
+      "id": "web/PageScope",
       "type": "Class",
+      "label": "PageScope (web)",
       "subClassOf": "TestScope",
-      "comment": "TODO"
+      "comment": "Describe which elements are included, and which are excluded from the test of an HTML page",
+      "properties": ["included", "excluded"]
+    },
+    {
+      "id": "web/Selector",
+      "type": "Class",
+      "label": "Selector (web)",
+      "comment": "A CSS Selector of a DOM node, a list of CSS selectors, of iframes ending at a DOM node, or a list of lists of CSS selectors of shadow DOM roots nodes in iframes, ending at a DOM node."
     },
     {
       "id": "TestEnvironment",
       "type": "Class",
-      "comment": "TODO"
+      "comment": "A generalised description of the setup for a test environment"
     },
     {
-      "id": "BrowserSetup",
+      "id": "web/BrowserSetup",
       "type": "Class",
+      "label": "BrowserSetup (web)",
       "subClassOf": "TestEnvironment",
-      "comment": "TODO"
-    },
-    {
-      "id": "AccessibilityTester",
-      "type": "Class",
-      "comment": "TODO"
+      "comment": "A description of the browser setup",
+      "properties": [
+        "browserName",
+        "browserVersion",
+        "windowWidth",
+        "windowHeight"
+      ]
     },
     {
       "id": "TestConfiguration",
+      "type": "Class",
+      "comment": "TODO",
+      "properties": ["todo"]
+    },
+    {
+      "id": "Software",
+      "type": "Class",
+      "comment": "TODO",
+      "properties": ["todo"]
+    },
+    {
+      "id": "TestEngine",
+      "type": "Class",
+      "comment": "TODO",
+      "subClassOf": "Software",
+      "properties": ["todo"]
+    },
+    {
+      "id": "TestRunner",
+      "type": "Class",
+      "comment": "TODO",
+      "subClassOf": "Software",
+      "properties": ["todo"]
+    },
+    {
+      "id": "Application",
+      "type": "Class",
+      "subClassOf": "Software",
+      "comment": "TODO",
+      "properties": ["todo"]
+    },
+    {
+      "id": "web/WebSite",
+      "type": "Class",
+      "subClassOf": "Application",
+      "label": "WebSite (web)",
+      "comment": "TODO",
+      "properties": ["todo"]
+    },
+    {
+      "id": "ios/UIApplication",
+      "type": "Class",
+      "subClassOf": "Application",
+      "label": "UIApplication (iOS)",
+      "comment": "TODO",
+      "properties": ["todo"]
+    },
+    {
+      "id": "ScreenShot",
+      "type": "Class",
+      "comment": "TODO"
+    },
+    {
+      "id": "SubresourceIntegrity",
       "type": "Class",
       "comment": "TODO"
     }

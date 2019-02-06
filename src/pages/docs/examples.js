@@ -1,7 +1,8 @@
 import React from 'react'
 import { PrismJSON } from '../../components/Prism'
 import Layout from '../../components/layout'
-import simpleExample from '../../examples/simple.json'
+import simpleWebExample from '../../examples/simple-web.json'
+import simpleIOSExample from '../../examples/simple-ios.json'
 import webPageTestExample1 from '../../examples/WebPageTest.json'
 import HTMLPageExample from '../../examples/HTMLPage.json'
 
@@ -17,7 +18,7 @@ class IndexPage extends React.Component {
           the test produced 2 results. One of the results is
           "failed", and the second is "passed".
         </p>
-        <PrismJSON code={simpleExample} />
+        <PrismJSON code={simpleWebExample} />
 
         <h2>Example: Single test for a web page</h2>
         <p>
@@ -34,6 +35,13 @@ class IndexPage extends React.Component {
           element(s) that were changed and re-tested
         </p>
         <PrismJSON code={HTMLPageExample} />
+
+        <h2>Example: A basic iOS UIViewController test</h2>
+        <p>
+          An example similar to the simple web example,
+          written for iOS.
+        </p>
+        <PrismJSON code={simpleIOSExample} />
       </Layout>
     )
   }

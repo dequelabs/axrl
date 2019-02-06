@@ -1,29 +1,40 @@
 {
   "@context": "https://axrl.org/context/web-v1.json",
-  "@type": "WebPageTest",
+  "@type": "PageTest",
   "timestamp": "2018-09-25T10:04:13.274Z",
   "testSubject": {
     "@type": "HTMLPage",
     "url": "https://deque.com"
   },
-  "testSubjectState": "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC",
+  "state": "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC",
   "scope": {
-    "@type": "HTMLPageScope",
+    "@type": "PageScope",
     "exclude": ["#footer"]
   },
   "environment": {
-    "@type": "BrowserSetting",
-    "browser": "chrome",
-    "browserVersion": "12.3.4",
+    "@type": "BrowserSetup",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.81 Safari/537.36",
     "windowWidth": 1280,
-    "windowHeight": 1024
+    "windowHeight": 1024,
+    "orientationAngle": 0,
+    "orientationType": "landscape-primary"
   },
-  "tester": {
-    "@type": "Software",
+  "testEngine": {
+    "@type": "TestEngine",
     "@id": "https://github.com/dequelabs/axe-core/releases/tag/v3.1.2",
     "name": "axe-core",
-    "release": "3.1.2",
-    "homepage": "https://deque.com/axe/"
+    "release": "3.1.2"
+  },
+  "testRunner": {
+    "@type": "TestRunner",
+    "name": "AttestChrome",
+    "release": "2.6.0"
+  },
+  "engineOptions": {
+    "runOnly": {
+      "type": "tag",
+      "value": ["wcag2a", "wcag2aa"]
+    }
   },
   "results": [
     {
@@ -56,7 +67,7 @@
       ]
     },
     {
-      "@type": "TestSkip",
+      "@type": "TestInapplicable",
       "description": "Video elements have a caption",
       "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/video-caption"
     },

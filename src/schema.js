@@ -47,9 +47,14 @@ function getClassHierarchy(parentClass) {
   })
 }
 
+function findTypeData(type) {
+  return findClassData(type) || findPropertyData(type)
+}
+
 module.exports = {
   findClassData,
   findPropertyData,
+  findTypeData,
   getClassInheritance,
   getSuperClasses,
   getClassDescriptions,

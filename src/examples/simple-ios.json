@@ -1,0 +1,42 @@
+{
+  "@context": "https://axrl.org/context/ios-v1.json",
+  "@type": "UIViewControllerTest",
+  "state": [
+    {
+      "@type": "ScreenShot",
+      "@value": "data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7"
+    }
+  ],
+  "testSubject": {
+    "@type": "UIViewController",
+    "name": "something",
+    "className": "SomeUIViewController",
+    "screenshot": "..."
+  },
+  "results": [
+    {
+      "@type": "TestFailure",
+      "impact": "Critical",
+      "description": "UIButtons must have an accessible name",
+      "remediation": "Provide set the accessibleName property",
+      "helpUrl": "https://dequeuniversity.com/rules/axe-ios/2.0/button-name",
+      "node": {
+        "@type": "UIView",
+        "className": "UIButton",
+        "accessibleLabel": "",
+        "identifier": "DequeAddedID_10"
+      }
+    },
+    {
+      "@type": "TestSuccess",
+      "helpUrl": "https://dequeuniversity.com/rules/axe-ios/1.0/color-contrast",
+      "node": {
+        "@type": "UIView",
+        "className": "UILabel",
+        "frame": "(107.5, 156.5, 106.0, 20.5)",
+        "visibleLabel": "Gray on Black",
+        "identifier": "DequeAddedID_11"
+      }
+    }
+  ]
+}

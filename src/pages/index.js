@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { PrismJSON } from '../components/Prism'
-import simpleExample from '../examples/simple.json'
+import simpleWebExample from '../examples/simple-web.json'
 
 class IndexPage extends React.Component {
   render() {
@@ -34,7 +34,7 @@ class IndexPage extends React.Component {
           the test produced 2 results. One of the results is
           "failed", and the second is "passed".
         </p>
-        <PrismJSON code={simpleExample} />
+        <PrismJSON code={simpleWebExample} />
       </Layout>
     )
   }

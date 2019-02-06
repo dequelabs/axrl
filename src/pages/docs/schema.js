@@ -1,6 +1,6 @@
 import React from 'react'
 import { PrismJSON } from '../../components/Prism'
-import simpleExample from '../../examples/simple.json'
+import simpleWebExample from '../../examples/simple-web.json'
 import Layout from '../../components/layout'
 import ClassHierarchy from '../../components/ClassHierarchy'
 
@@ -26,7 +26,7 @@ class SchemaPage extends React.Component {
           the test produced 2 results. One of the results is
           "failed", and the second is "passed".
         </p>
-        <PrismJSON code={simpleExample} />
+        <PrismJSON code={simpleWebExample} />
 
         <h2>
           <code>@context</code> property

@@ -47,6 +47,12 @@
       "@type": "Property",
       "comment": "One or more changes that remediate an issue",
       "rangeIncludes": ["schema:Text"]
+    },
+    {
+      "id": "scope",
+      "@type": "Property",
+      "comment": "What part(s) of the test subject were tested",
+      "rangeIncludes": ["Selector", "TestScope"]
     }
   ]
 }

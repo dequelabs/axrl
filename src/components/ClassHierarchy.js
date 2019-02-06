@@ -27,7 +27,7 @@ class ClassHierarchy extends React.Component {
   render() {
     return (
       <>
-        <h2>Type Structure</h2>
+        <h2>Class Hierarchy</h2>
         <ul>{getClassHierarchy().map(classStructure)}</ul>
       </>
     )
