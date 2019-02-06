@@ -1,0 +1,1 @@
+{"pageContext":{"id":"web/BrowserSetup","type":"Class","label":"BrowserSetup (web)","subClassOf":"TestEnvironment","comment":"A description of the browser setup","properties":["browserName","browserVersion","windowWidth","windowHeight"]}}

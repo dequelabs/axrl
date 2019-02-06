@@ -1,0 +1,1 @@
+{"pageContext":{"id":"HTMLPageScope","type":"Class","subClassOf":"TestScope","comment":"Describe which elements are included, and which are excluded from the test of an HTML page","properties":["included","excluded"]}}

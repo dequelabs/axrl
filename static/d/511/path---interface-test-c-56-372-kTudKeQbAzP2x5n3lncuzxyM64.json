@@ -1,0 +1,1 @@
+{"pageContext":{"id":"InterfaceTest","type":"Class","comment":"A single test of an generic interface in a particular state.","properties":["scope","tester","configuration","environment","result","timestamp","testSubject","testSubjectState"]}}
