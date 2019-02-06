@@ -69,6 +69,29 @@ class SchemaPage extends React.Component {
 
         <p>TODO: Add a graphic</p>
 
+        <h2>AXRL Requirements</h2>
+        <p>
+          In AXRL, all properties with the exception of the{' '}
+          <code>@type</code> property are optional. This
+          gives tools the flexibility to provide data that
+          they have, but does not prevent adoption of AXRL
+          when that data is not available. Properties{' '}
+          <em>must</em> use a value of the expected class.
+          This can be a value that is a sub class of one of
+          the expected classes. Objects <em>must not</em> be
+          given properties not defined for its class. There
+          are three ways to add new properties to a class.
+        </p>
+        <ul>
+          <li>
+            Report a missing property to AXRL and have it
+            added to the data format
+          </li>
+          <li>Create a subclass with the new properties</li>
+          <li>
+            Add an additional class as a type to the object
+          </li>
+        </ul>
         <ClassHierarchy />
       </Layout>
     )
