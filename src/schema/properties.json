@@ -53,6 +53,42 @@
       "@type": "Property",
       "comment": "What part(s) of the test subject were tested",
       "rangeIncludes": ["Selector", "TestScope"]
+    },
+    {
+      "id": "name",
+      "@type": "Property",
+      "comment": "Human readable name of the software",
+      "rangeIncludes": ["schema:Text"]
+    },
+    {
+      "id": "description",
+      "@type": "Property",
+      "comment": "Human readable description of the software",
+      "rangeIncludes": ["schema:Text"]
+    },
+    {
+      "id": "homepage",
+      "@type": "Property",
+      "comment": "Homepage for the software",
+      "rangeIncludes": ["schema:URL"]
+    },
+    {
+      "id": "created",
+      "@type": "Property",
+      "comment": "Date when the software was created or released, in YYYY-MM-DD form. e.g. 2004-04-05",
+      "rangeIncludes": ["schema:Date"]
+    },
+    {
+      "id": "release",
+      "@type": "Property",
+      "comment": "Version information about the software release",
+      "rangeIncludes": ["schema:Text"]
+    },
+    {
+      "id": "engineOptions",
+      "@type": "Property",
+      "comment": "Options used to run the test engine",
+      "rangeIncludes": ["Options"]
     }
   ]
 }

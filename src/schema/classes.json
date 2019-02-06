@@ -6,9 +6,10 @@
       "comment": "A single test of an generic interface in a particular state.",
       "properties": [
         "result",
-        "testSubject",
+        "subject",
         "state",
         "scope",
+        "testset",
         "timestamp",
         "environment",
         "testEngine",
@@ -193,45 +194,46 @@
       ]
     },
     {
-      "id": "TestConfiguration",
-      "type": "Class",
-      "comment": "TODO",
-      "properties": ["todo"]
-    },
-    {
       "id": "Software",
       "type": "Class",
-      "comment": "TODO",
-      "properties": ["todo"]
+      "comment": "A generic piece of executable code, such as an app, a web page, a command line tool, etc.",
+      "properties": [
+        "name",
+        "description",
+        "homepage",
+        "created",
+        "release"
+      ]
     },
     {
       "id": "TestEngine",
       "type": "Class",
-      "comment": "TODO",
-      "subClassOf": "Software",
-      "properties": ["todo"]
+      "comment": "Software that identifies accessibility issues, automatically or for user review",
+      "subClassOf": "Software"
     },
     {
       "id": "TestRunner",
       "type": "Class",
-      "comment": "TODO",
-      "subClassOf": "Software",
-      "properties": ["todo"]
+      "comment": "A program that initiates a test engine and reports on its results",
+      "subClassOf": "Software"
     },
     {
       "id": "Application",
       "type": "Class",
       "subClassOf": "Software",
-      "comment": "TODO",
-      "properties": ["todo"]
+      "comment": "Some program, or set of programs that has an interface which can be tested for accessibility."
+    },
+    {
+      "id": "Options",
+      "type": "Class",
+      "comment": "A generic configuration used by a TestEngine"
     },
     {
       "id": "web/WebSite",
       "type": "Class",
       "subClassOf": "Application",
       "label": "WebSite (web)",
-      "comment": "TODO",
-      "properties": ["todo"]
+      "comment": "A WebSite is a set of related web pages and other items typically served from a single web domain and available via URLs."
     },
     {
       "id": "ios/UIApplication",
@@ -244,12 +246,12 @@
     {
       "id": "ScreenShot",
       "type": "Class",
-      "comment": "TODO"
+      "comment": "A graphic of a user interface, at the state of testing"
     },
     {
       "id": "SubresourceIntegrity",
       "type": "Class",
-      "comment": "TODO"
+      "comment": "A base64-encoded cryptographic of the a file, at the state of testing"
     }
   ]
 }
