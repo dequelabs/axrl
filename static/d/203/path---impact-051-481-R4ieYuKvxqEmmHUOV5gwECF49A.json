@@ -1,0 +1,1 @@
+{"pageContext":{"id":"impact","@type":"Property","comment":"Impact of the test result on users: minor, moderate, serious, critical. Impact must only be set if the outcome is failed.","rangeIncludes":["ImpactType"]}}

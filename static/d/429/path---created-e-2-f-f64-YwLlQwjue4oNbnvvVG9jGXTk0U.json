@@ -1,0 +1,1 @@
+{"pageContext":{"id":"created","@type":"Property","comment":"Date when the software was created or released, in YYYY-MM-DD form. e.g. 2004-04-05","rangeIncludes":["schema:Date"]}}
