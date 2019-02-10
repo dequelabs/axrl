@@ -8,11 +8,11 @@
       "results": [
         {
           "@type": "TestFailure",
-          "node": "#imageNoAlt"
+          "target": "#imageNoAlt"
         },
         {
           "@type": "TestSuccess",
-          "node": "#imageWithAlt"
+          "target": "#imageWithAlt"
         }
       ]
     }

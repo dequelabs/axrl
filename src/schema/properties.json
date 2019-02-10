@@ -25,16 +25,16 @@
       "rangeIncludes": ["ImpactType"]
     },
     {
-      "id": "node",
+      "id": "target",
       "@type": "Property",
-      "comment": "Definition of the node that was tested.",
-      "rangeIncludes": ["Node", "Selector"]
+      "comment": "Definition of the node, view, component or other item in an interface that was tested.",
+      "rangeIncludes": ["TestTarget", "Selector"]
     },
     {
-      "id": "relatedNodes",
+      "id": "relatedTargets",
       "@type": "Property",
-      "comment": "A node that along with the tested node lead to the test result",
-      "rangeIncludes": ["Node"]
+      "comment": "An item in an interface that along with the tested target lead to the test result",
+      "rangeIncludes": ["TestTarget", "Selector"]
     },
     {
       "id": "remediation",

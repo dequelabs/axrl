@@ -14,7 +14,7 @@
           "description": "Web pages must have a title",
           "remediation": "Add a title to the web page",
           "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/document-title",
-          "node": {
+          "target": {
             "@type": "DOMNode",
             "codeSnippet": "<html>...</html>",
             "selector": "html"
@@ -23,7 +23,7 @@
         {
           "@type": "TestSuccess",
           "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/color-contrast",
-          "node": {
+          "target": {
             "@type": "DOMNode",
             "codeSnippet": "<h1>Welcome</h1>",
             "selector": "h1"
@@ -39,7 +39,7 @@
         {
           "@type": "TestSuccess",
           "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/color-contrast",
-          "node": {
+          "target": {
             "@type": "DOMNode",
             "codeSnippet": "<p class='new-element'>Some new content</p>",
             "selector": ".new-element"

@@ -61,14 +61,14 @@
       "type": "Class",
       "comment": "The result of successful a test.",
       "subClassOf": "TestResult",
-      "properties": ["node", "relatedNodes"]
+      "properties": ["target", "relatedTargets"]
     },
     {
       "id": "TestInapplicable",
       "type": "Class",
       "comment": "The result of an inapplicable test.",
       "subClassOf": "TestResult",
-      "properties": ["node", "relatedNodes"]
+      "properties": ["target", "relatedTargets"]
     },
     {
       "id": "TestFailure",
@@ -76,8 +76,8 @@
       "comment": "The result of failed a test.",
       "subClassOf": "TestResult",
       "properties": [
-        "node",
-        "relatedNodes",
+        "target",
+        "relatedTargets",
         "impact",
         "remediation"
       ]
@@ -87,7 +87,7 @@
       "type": "Class",
       "comment": "The result of a test that was not completed.",
       "subClassOf": "TestResult",
-      "properties": ["node", "relatedNodes"]
+      "properties": ["target", "relatedTargets"]
     },
     {
       "id": "ImpactType",
@@ -119,9 +119,9 @@
       "comment": "An issue that has little to no impact on users"
     },
     {
-      "id": "Node",
+      "id": "TestTarget",
       "type": "Class",
-      "comment": "A generalised node, or component in a user interface",
+      "comment": "A generalised element, node, view or component in a user interface",
       "properties": [
         "screenshot",
         "semanticRole",
@@ -131,7 +131,7 @@
     {
       "id": "web/DOMNode",
       "type": "Class",
-      "subClassOf": "Node",
+      "subClassOf": "TestTarget",
       "label": "DOMNode (web)",
       "comment": "A description of a node in the DOM",
       "properties": ["codeSnippet", "web/selector"]
@@ -139,7 +139,7 @@
     {
       "id": "ios/UIView",
       "type": "Class",
-      "subClassOf": "Node",
+      "subClassOf": "TestTarget",
       "label": "UIView (iOS)",
       "comment": "TODO",
       "properties": ["todo"]

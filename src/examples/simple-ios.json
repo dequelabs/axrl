@@ -20,7 +20,7 @@
       "description": "UIButtons must have an accessible name",
       "remediation": "Provide set the accessibleName property",
       "helpUrl": "https://dequeuniversity.com/rules/axe-ios/2.0/button-name",
-      "node": {
+      "target": {
         "@type": "UIView",
         "className": "UIButton",
         "accessibleLabel": "",
@@ -30,7 +30,7 @@
     {
       "@type": "TestSuccess",
       "helpUrl": "https://dequeuniversity.com/rules/axe-ios/1.0/color-contrast",
-      "node": {
+      "target": {
         "@type": "UIView",
         "className": "UILabel",
         "frame": "(107.5, 156.5, 106.0, 20.5)",

@@ -42,7 +42,7 @@
       "impact": "Moderate",
       "description": "Web pages must have a title",
       "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/document-title",
-      "node": {
+      "target": {
         "@type": "DOMNode",
         "codeSnippet": "<html>...</html>",
         "selector": ":root"
@@ -53,12 +53,12 @@
       "@type": "TestSuccess",
       "description": "Video elements have a caption",
       "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/video-caption",
-      "node": {
+      "target": {
         "@type": "DOMNode",
         "codeSnippet": "<div>sometext</div>",
         "selector": "#fixture > div"
       },
-      "relatedNodes": [
+      "relatedTargets": [
         {
           "@type": "DOMNode",
           "codeSnippet": "<div id='fixture'>...</div>",
@@ -75,7 +75,7 @@
       "@type": "TestAbort",
       "description": "Video elements have a caption",
       "helpUrl": "https://dequeuniversity.com/rules/axe/3.1/video-caption",
-      "node": {
+      "target": {
         "@type": "DOMNode",
         "codeSnippet": "<div>...</div>",
         "selector": "..."
