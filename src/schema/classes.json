@@ -1,7 +1,7 @@
 {
   "@graph": [
     {
-      "id": "AccessibilityTest",
+      "id": "SingleStateTest",
       "type": "Class",
       "comment": "A single test of an generic interface in a particular state.",
       "properties": [
@@ -18,30 +18,9 @@
       ]
     },
     {
-      "id": "web/PageTest",
-      "type": "Class",
-      "subClassOf": "AccessibilityTest",
-      "label": "PageTest (web)",
-      "comment": "A single test of a web page in a particular state."
-    },
-    {
-      "id": "ios/UIControllerTest",
-      "type": "Class",
-      "subClassOf": "AccessibilityTest",
-      "label": "UIControllerTest (iOS)",
-      "comment": "TODO"
-    },
-    {
-      "id": "android/LayoutTest",
-      "type": "Class",
-      "subClassOf": "AccessibilityTest",
-      "label": "LayoutTest (Android)",
-      "comment": "TODO"
-    },
-    {
       "id": "TestSubject",
       "type": "Class",
-      "comment": "The some interface that tests can be performed on"
+      "comment": "A generic interface that tests can be performed on"
     },
     {
       "id": "web/HTMLPage",
@@ -141,12 +120,8 @@
     {
       "id": "TestTarget",
       "type": "Class",
-      "comment": "A generalised element, node, view or component in a user interface",
-      "properties": [
-        "screenshot",
-        "semanticRole",
-        "accessibleName"
-      ]
+      "comment": "A generic \"part\" of an interface, such as an element, node, view or component",
+      "properties": ["semanticRole", "accessibleName"]
     },
     {
       "id": "web/DOMNode",

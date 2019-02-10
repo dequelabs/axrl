@@ -1,6 +1,6 @@
 {
   "@context": "https://axrl.org/context/web-v1.json",
-  "@type": "PageTest",
+  "@type": "SingleStateTest",
   "subject": "http://example.com",
   "results": [
     {

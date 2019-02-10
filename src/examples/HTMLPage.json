@@ -4,7 +4,7 @@
   "url": "https://deque.com",
   "tests": [
     {
-      "@type": "WebPageTest",
+      "@type": "SingleStateTest",
       "time": "2019-01-31T13:36:18+0000",
       "scope": "*",
       "results": [
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "@type": "WebPageTest",
+      "@type": "SingleStateTest",
       "time": "2018-01-31T13:36:18+0000",
       "scope": ".new-element",
       "results": [

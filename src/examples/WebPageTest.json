@@ -1,6 +1,6 @@
 {
   "@context": "https://axrl.org/context/web-v1.json",
-  "@type": "PageTest",
+  "@type": "SingleStateTest",
   "timestamp": "2018-09-25T10:04:13.274Z",
   "testSubject": {
     "@type": "HTMLPage",
