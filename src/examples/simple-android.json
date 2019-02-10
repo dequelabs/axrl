@@ -1,0 +1,43 @@
+{
+  "@context": "https://axrl.org/context/android-v1.json",
+  "@type": "LayoutTest",
+  "state": {
+    "@type": "ScreenShot",
+    "@value": "data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfjZ0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVICSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QAnQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0SlBCBMQiB0UjIQA7"
+  },
+  "subject": {
+    "@type": "Layout",
+    "name": "something",
+    "className": "android.widget.LinearLayout"
+  },
+  "results": [
+    {
+      "@type": "TestFailure",
+      "impact": "Critical",
+      "description": "Text must have sufficient contrast",
+      "remediation": "Give the text a color that has a contrast ratio of 4.5:1",
+      "helpUrl": "https://dequeuniversity.com/rules/axe-android/2.0/text-contrast",
+      "target": {
+        "@type": "View",
+        "classname": "android.widget.TextView",
+        "labeledby": " ",
+        "text": "INACCESSIBLE",
+        "position": "Rect(168, 913 - 1020, 1011)",
+        "contentdescription": null
+      }
+    },
+    {
+      "@type": "TestSuccess",
+      "helpUrl": "https://dequeuniversity.com/rules/axe-android/2.0/button-name",
+      "description": "Buttons have an accessible name",
+      "target": {
+        "@type": "View",
+        "classname": "android.widget.Button",
+        "labeledby": "Some text",
+        "text": "",
+        "position": "Rect(168, 913 - 1020, 1011)",
+        "contentdescription": null
+      }
+    }
+  ]
+}

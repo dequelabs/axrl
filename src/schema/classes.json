@@ -1,7 +1,7 @@
 {
   "@graph": [
     {
-      "id": "InterfaceTest",
+      "id": "AccessibilityTest",
       "type": "Class",
       "comment": "A single test of an generic interface in a particular state.",
       "properties": [
@@ -20,16 +20,23 @@
     {
       "id": "web/PageTest",
       "type": "Class",
-      "subClassOf": "InterfaceTest",
+      "subClassOf": "AccessibilityTest",
       "label": "PageTest (web)",
       "comment": "A single test of a web page in a particular state."
     },
     {
       "id": "ios/UIControllerTest",
       "type": "Class",
-      "subClassOf": "InterfaceTest",
+      "subClassOf": "AccessibilityTest",
       "label": "UIControllerTest (iOS)",
-      "comment": "A single test of a web page in a particular state."
+      "comment": "TODO"
+    },
+    {
+      "id": "android/LayoutTest",
+      "type": "Class",
+      "subClassOf": "AccessibilityTest",
+      "label": "LayoutTest (Android)",
+      "comment": "TODO"
     },
     {
       "id": "TestSubject",
@@ -51,10 +58,23 @@
       "comment": "TODO"
     },
     {
+      "id": "android/Layout",
+      "type": "Class",
+      "subClassOf": "TestSubject",
+      "label": "Layout (Android)",
+      "comment": "TODO"
+    },
+    {
       "id": "TestResult",
       "type": "Class",
       "comment": "The result of a test.",
-      "properties": ["description", "summary", "helpUrl"]
+      "properties": [
+        "description",
+        "summary",
+        "helpUrl",
+        "requiredBy",
+        "taxonomy"
+      ]
     },
     {
       "id": "TestSuccess",
@@ -141,6 +161,14 @@
       "type": "Class",
       "subClassOf": "TestTarget",
       "label": "UIView (iOS)",
+      "comment": "TODO",
+      "properties": ["todo"]
+    },
+    {
+      "id": "android/View",
+      "type": "Class",
+      "subClassOf": "TestTarget",
+      "label": "View (Android)",
       "comment": "TODO",
       "properties": ["todo"]
     },

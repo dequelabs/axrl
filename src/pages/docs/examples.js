@@ -3,6 +3,7 @@ import { PrismJSON } from '../../components/Prism'
 import Layout from '../../components/layout'
 import simpleWebExample from '../../examples/simple-web.json'
 import simpleIOSExample from '../../examples/simple-ios.json'
+import simpleAndroidExample from '../../examples/simple-android.json'
 import webPageTestExample1 from '../../examples/WebPageTest.json'
 import HTMLPageExample from '../../examples/HTMLPage.json'
 
@@ -42,6 +43,13 @@ class IndexPage extends React.Component {
           written for iOS.
         </p>
         <PrismJSON code={simpleIOSExample} />
+
+        <h2>Example: A basic Android Layout test</h2>
+        <p>
+          An example similar to the simple web example,
+          written for Android.
+        </p>
+        <PrismJSON code={simpleAndroidExample} />
       </Layout>
     )
   }
