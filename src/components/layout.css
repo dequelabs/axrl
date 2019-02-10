@@ -1,10 +1,13 @@
-.brand {
+a[href].brand {
   color: white;
   font-size: 1.3em;
   text-decoration: none;
 }
 .mainNav {
   background: #0077c8;
+}
+a[href] {
+  color: #0077c8;
 }
 .mainNav ul {
   display: flex;
