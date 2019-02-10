@@ -170,9 +170,16 @@
       "properties": ["included", "excluded"]
     },
     {
+      "id": "ptr:pointerClass",
+      "type": "Class",
+      "label": "Pointer (W3C, Pointers-in-RDF)",
+      "comment": "A method that could be used to point out different parts of electronic documents or applications."
+    },
+    {
       "id": "web/Selector",
       "type": "Class",
       "label": "Selector (web)",
+      "subClassOf": "ptr:pointerClass",
       "comment": "A CSS Selector of a DOM node, a list of CSS selectors, of iframes ending at a DOM node, or a list of lists of CSS selectors of shadow DOM roots nodes in iframes, ending at a DOM node."
     },
     {
@@ -252,6 +259,25 @@
       "id": "SubresourceIntegrity",
       "type": "Class",
       "comment": "A base64-encoded cryptographic of the a file, at the state of testing"
+    },
+    {
+      "id": "schema:Date",
+      "type": "Class",
+      "label": "Date (schema.org)",
+      "comment": "A date value in ISO 8601 date format"
+    },
+    {
+      "id": "schema:Text",
+      "type": "Class",
+      "label": "Text (schema.org)",
+      "comment": "A text data type"
+    },
+    {
+      "id": "schema:URL",
+      "type": "Class",
+      "label": "URL (schema.org)",
+      "subClassOf": "schema:Text",
+      "comment": "A text expressing a URL"
     }
   ]
 }

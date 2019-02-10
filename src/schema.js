@@ -1,6 +1,7 @@
 /* IMPORTANT: This file is used in NodeJS, so can't use ES6 modules */
 const classes = require('./schema/classes.json')
 const properties = require('./schema/properties.json')
+const context = require('./schema/context.json')
 
 function findClassData(id) {
   return classes['@graph'].find(
@@ -62,6 +63,24 @@ function findTypeData(type) {
   return findClassData(type) || findPropertyData(type)
 }
 
+function getContext() {
+  return { ...context }
+}
+
+function getUrl(to) {
+  const [namespace, type] = to.split(':')
+  if (!type) {
+    return `/${to}`
+  }
+  const baseURL = getContext()[namespace]
+  if (!baseURL) {
+    throw new Error(
+      `Unknown namespace '${namespace}' in context.json`
+    )
+  }
+  return baseURL + type
+}
+
 module.exports = {
   findClassData,
   findPropertyData,
@@ -71,5 +90,7 @@ module.exports = {
   getClassDescriptions,
   getPropertyDescriptions,
   getTypeDescriptions,
-  getClassHierarchy
+  getClassHierarchy,
+  getContext,
+  getUrl
 }
