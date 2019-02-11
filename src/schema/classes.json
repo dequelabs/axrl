@@ -9,7 +9,6 @@
         "subject",
         "state",
         "scope",
-        "testset",
         "timestamp",
         "environment",
         "testEngine",

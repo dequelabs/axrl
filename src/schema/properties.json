@@ -7,6 +7,36 @@
       "rangeIncludes": ["schema:Text"]
     },
     {
+      "id": "result",
+      "@type": "Property",
+      "comment": "The result of a test.",
+      "rangeIncludes": ["TestResult"]
+    },
+    {
+      "id": "subject",
+      "@type": "Property",
+      "comment": "TODO",
+      "rangeIncludes": ["TestSubject"]
+    },
+    {
+      "id": "testEngine",
+      "@type": "Property",
+      "comment": "TODO",
+      "rangeIncludes": ["TestEngine"]
+    },
+    {
+      "id": "testRunner",
+      "@type": "Property",
+      "comment": "TODO",
+      "rangeIncludes": ["TestRunner"]
+    },
+    {
+      "id": "engineOptions",
+      "@type": "Property",
+      "comment": "Options used to run the test engine",
+      "rangeIncludes": ["Options"]
+    },
+    {
       "id": "summary",
       "@type": "Property",
       "comment": "shortened variation of the description",
@@ -83,12 +113,6 @@
       "@type": "Property",
       "comment": "Version information about the software release",
       "rangeIncludes": ["schema:Text"]
-    },
-    {
-      "id": "engineOptions",
-      "@type": "Property",
-      "comment": "Options used to run the test engine",
-      "rangeIncludes": ["Options"]
     }
   ]
 }
