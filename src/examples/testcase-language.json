@@ -2,9 +2,9 @@
   "@context": "https://axrl.org/context/web-v1.json",
   "@type": "HTMLPage",
   "url": "http://localhost:9876/test/integration/rules/image-alt",
-  "tests": [
+  "testSubjectOf": [
     {
-      "@type": "SingleStateTest",
+      "@type": "StateTest",
       "results": [
         {
           "@type": "TestFailure",

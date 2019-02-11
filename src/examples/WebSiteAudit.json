@@ -1,0 +1,17 @@
+{
+  "@type": "Audit",
+  "commissioner": {},
+  "auditor": {},
+  "description": "",
+  "name": "",
+  "scope": "???",
+  "startedAt": "",
+  "endedAt": "",
+  "standards": "TODO: need a better property name for this",
+  "sample": [
+    {
+      "@type": "@WebPage",
+      "tests": ["..."]
+    }
+  ]
+}

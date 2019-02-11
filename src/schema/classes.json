@@ -1,7 +1,7 @@
 {
   "@graph": [
     {
-      "id": "SingleStateTest",
+      "id": "StateTest",
       "type": "Class",
       "comment": "A single test of an generic interface in a particular state.",
       "properties": [
@@ -27,7 +27,8 @@
       "type": "Class",
       "subClassOf": "TestSubject",
       "label": "HTMLPage (web)",
-      "comment": "An HTML page that tests can be performed on"
+      "comment": "An HTML page that tests can be performed on",
+      "properties": ["crawlerDepth"]
     },
     {
       "id": "ios/UIViewController",
