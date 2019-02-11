@@ -1,0 +1,1 @@
+{"pageContext":{"id":"target","@type":"Property","comment":"Definition of the node, view, component or other item in an interface that was tested.","rangeIncludes":["TestTarget","ptr:pointerClass"]}}

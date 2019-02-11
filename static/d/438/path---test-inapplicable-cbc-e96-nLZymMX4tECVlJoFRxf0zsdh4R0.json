@@ -1,0 +1,1 @@
+{"pageContext":{"id":"TestInapplicable","type":"Class","comment":"The result of an inapplicable test.","subClassOf":"TestResult","properties":["target","relatedTargets"]}}

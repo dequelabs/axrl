@@ -1,0 +1,1 @@
+{"pageContext":{"id":"relatedTargets","@type":"Property","comment":"An item in an interface that along with the tested target lead to the test result","rangeIncludes":["TestTarget","ptr:pointerClass"]}}
