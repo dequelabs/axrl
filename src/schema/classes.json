@@ -27,7 +27,7 @@
       "subClassOf": "TestSubject",
       "label": "HTMLPage (web)",
       "comment": "An HTML page that tests can be performed on",
-      "properties": ["crawlerDepth"]
+      "properties": ["url", "pageTitle", "crawlerDepth"]
     },
     {
       "id": "ios/UIViewController",
