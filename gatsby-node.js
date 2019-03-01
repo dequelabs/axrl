@@ -4,7 +4,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
   const pageTemplate = path.resolve(
-    `src/components/pageTemplate.js`
+    'src/components/pageTemplate.js'
   )
 
   const result = await graphql(`
@@ -40,7 +40,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
 // Replacing '/' would result in empty string which is invalid
 const replacePath = path =>
-  path === `/` ? path : path.replace(/\/$/, ``)
+  path === '/' ? path : path.replace(/\/$/, '')
 
 // Remove the trailing space for each page
 exports.onCreatePage = ({ page, actions }) => {

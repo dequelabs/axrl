@@ -8,7 +8,7 @@ exports.createPages = ({ boundActionCreators }) => {
     createPage({
       path: typeData.id,
       component: path.resolve(
-        `src/components/TypeDescription.js`
+        'src/components/TypeDescription.js'
       ),
       // Send additional data to page from JSON (or query inside template)
       context: typeData
