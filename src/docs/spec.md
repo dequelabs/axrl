@@ -100,7 +100,7 @@ Support accessibility results for:
 - [x] Make it easy to generate from existing products, particularly axe-core
 - [x] Support result aggregation
 - [x] Can function as a test case language
-- Can easilly be filtered for:
+- Can easily be filtered for:
   - [x] Number of issues
   - [x] Level of impact
 - [x] Can be used to express Passed, Failed, Inapplicable, and Unknown
@@ -173,7 +173,7 @@ A TestDescription defines a test, such as a rule in axe-core or a checkpoint in 
 
 ### UIDescription
 
-A UIDescription is a description of the state of the user interface at the time that a test was performed. The goal is to capture enough information about the user interface the moment it was tested, to enable someone familiar with the product to either reproduce issues or varify that they have been resolved. An app, be it a web app or a native app, can often exist in a variety of states. Changes in state of the user interface should result in a different UIDescription.
+A UIDescription is a description of the state of the user interface at the time that a test was performed. The goal is to capture enough information about the user interface the moment it was tested, to enable someone familiar with the product to either reproduce issues or verify that they have been resolved. An app, be it a web app or a native app, can often exist in a variety of states. Changes in state of the user interface should result in a different UIDescription.
 
 There is no universal way of capturing the state of an application. At best, an approximation of the state can be made. Each platform should have its own extension of UIDescription, such as WebPageDescription, or AndroidAppDescription. These platform specific types can be used to capture actions that put the app in the tested state.
 
