@@ -8,7 +8,7 @@ title: 'AXRL Audits'
 
 ### SoftwareDescription
 
-Accessibility testing often involves testing multiple pages of a website, or multiple views of an app. A software description sets the scope for a collection of web pages, or a set of views in an app, for which accessibility audits are performed. There are no rules on how to scope a software description. The scope of a software description should be defined in a way that best suites the people responsible for its development and maintainence.
+Accessibility testing often involves testing multiple pages of a website, or multiple views of an app. A software description sets the scope for a collection of web pages, or a set of views in an app, for which accessibility audits are performed. There are no rules on how to scope a software description. The scope of a software description should be defined in a way that best suites the people responsible for its development and maintenance.
 
 Larger software often has multiple teams responsible for different parts. For example, the website of a bank often has public site, a authentication area, a account management system, etc.. Each of these areas gets its own softwareDescription. Use the `sub_components` property to reference SoftwareDescriptions that are contained within a larger application.
 
