@@ -113,6 +113,24 @@
       "@type": "Property",
       "comment": "Version information about the software release",
       "rangeIncludes": ["schema:Text"]
+    },
+    {
+      "id": "url",
+      "@type": "Property",
+      "comment": "URL to an HTML page",
+      "rangeIncludes": ["schema:URL"]
+    },
+    {
+      "id": "pageTitle",
+      "@type": "Property",
+      "comment": "Title to an HTML page",
+      "rangeIncludes": ["schema:Text"]
+    },
+    {
+      "id": "crawlerDepth",
+      "@type": "Property",
+      "comment": "Number of links followed from the homepage to locate the page",
+      "rangeIncludes": ["schema:Text"]
     }
   ]
 }
