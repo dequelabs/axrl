@@ -21,7 +21,7 @@ function Meta({ description, lang, title }) {
             }`}
             meta={[
               {
-                name: `description`,
+                name: 'description',
                 content: metaDescription
               }
             ]}
@@ -33,7 +33,7 @@ function Meta({ description, lang, title }) {
 }
 
 Meta.defaultProps = {
-  lang: `en`,
+  lang: 'en',
   meta: [],
   keywords: []
 }

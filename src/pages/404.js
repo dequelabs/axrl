@@ -1,7 +1,5 @@
 import React from 'react'
-
 import Layout from '../components/layout'
-import Meta from '../components/Meta'
 
 const NotFoundPage = () => (
   <Layout title="Page not found">
