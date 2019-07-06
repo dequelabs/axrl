@@ -6,8 +6,8 @@ import simpleWebExample from '../examples/simple-web.json'
 class IndexPage extends React.Component {
   render() {
     return (
-      <Layout title="what is AXRL">
-        <h1>What is AXRL</h1>
+      <Layout title="Home">
+        <h1>Accessibility Reporting Language</h1>
         <p>
           Accessibility Reporting Language (AXRL) is a data
           format designed to describe accessibility tests
@@ -26,7 +26,8 @@ class IndexPage extends React.Component {
           <li>Web / HTML</li>
           <li>Android</li>
           <li>iOS</li>
-          <li>Windows</li>
+          <li>Windows (future)</li>
+          <li>PDF (future)</li>
         </ul>
         <h2>Example: A basic web page test</h2>
         <p>
