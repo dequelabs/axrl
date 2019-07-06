@@ -81,6 +81,14 @@ function getUrl(to) {
   return baseURL + type
 }
 
+function getPlatformClasses(platform) {
+  return classes['@graph'].filter(({ id }) => {
+    return (
+      id.substr(0, platform.length + 1) === platform + '/'
+    )
+  })
+}
+
 module.exports = {
   findClassData,
   findPropertyData,
@@ -92,5 +100,6 @@ module.exports = {
   getTypeDescriptions,
   getClassHierarchy,
   getContext,
-  getUrl
+  getUrl,
+  getPlatformClasses
 }

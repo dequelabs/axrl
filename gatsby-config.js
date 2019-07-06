@@ -10,6 +10,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'schema-types',
+    'jsonld-contexts',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
