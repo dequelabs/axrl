@@ -14,7 +14,7 @@ class FundamentalsPage extends React.Component {
           Accessibility Reporting Language (AXRL) is a data
           format designed to describe accessibility tests
           for Web pages, Native apps and other software.
-          AXRL is designed to be a flexible and extendable
+          AXRL is designed to be a flexible and extensible
           data format. AXRL is designed as a JSON format,
           although because it is based on semantic web
           technologies, it could also be expressed in other
