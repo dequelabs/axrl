@@ -10,7 +10,7 @@ import HTMLPageExample from '../../examples/HTMLPage.json'
 class IndexPage extends React.Component {
   render() {
     return (
-      <Layout title="AXRL Examples">
+      <Layout title="Examples">
         <h1>AXRL Examples</h1>
         <ul>
           <li>
