@@ -87,8 +87,6 @@ class FundamentalsPage extends React.Component {
           properties.
         </p>
 
-        <p>TODO: Add a graphic</p>
-
         <h2>AXRL Requirements</h2>
         <p>
           In AXRL, all properties with the exception of the{' '}
