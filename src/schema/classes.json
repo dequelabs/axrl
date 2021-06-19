@@ -1,7 +1,7 @@
 {
   "@graph": [
     {
-      "id": "StateTest",
+      "id": "TestRun",
       "type": "Class",
       "comment": "A single test of an generic interface in a particular state.",
       "properties": [
